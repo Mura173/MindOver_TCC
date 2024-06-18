@@ -8,8 +8,12 @@ public class Character : MonoBehaviour
     float horizontalInput;
     bool isFacingRight = false;
     public float speed = 5f;
-    public float jumpPower = 5f;
     bool isGrounded = false;
+
+    public float jumpPower = 5f;
+    public float jumpTime = 0.35f;
+    public float jumpTimeCounter;
+    public bool isJumping;
 
     private Transform posStart;
 
@@ -37,9 +41,30 @@ public class Character : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && canJump == true)
         {
+            isJumping = true;
+            jumpTimeCounter = jumpTime;
             vivotia.velocity = new Vector2(vivotia.velocity.x, jumpPower);
-            isGrounded = false;
-            anim.SetBool("isJumping", !isGrounded);
+        }
+
+        if (Input.GetButton("Jump") && isJumping == true)
+        {
+            if (jumpTimeCounter > 0)
+            {
+                vivotia.velocity = new Vector2(vivotia.velocity.x, jumpPower);
+                jumpTimeCounter -= Time.deltaTime;
+                isGrounded = false;
+                anim.SetBool("isJumping", !isGrounded);
+            }
+            else
+            {
+                isJumping = false;
+            }
+
+        }
+
+        if (Input.GetButtonUp("Jump"))
+        {
+            isJumping = false;
         }
     }
 
