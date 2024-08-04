@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class CobraImpulso : MonoBehaviour
 {
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
     public float launchForce = 10f;
     public float launchAngle = 90f;
 
+    private Animator anim;
+
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         Launch();
     }
 
-    void Launch()
+    public void Launch()
     {
+        // anim.SetBool("Voando", true);
+
         // Converter ângulo em radianos
         float angleInRadians = launchAngle * Mathf.Deg2Rad;
 
