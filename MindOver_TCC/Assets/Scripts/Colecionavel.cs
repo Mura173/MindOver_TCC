@@ -9,7 +9,6 @@ public class Colecionavel : MonoBehaviour
         if (item.gameObject.CompareTag("Colecionavel"))
         {
             Destroy(item.gameObject);
-            Debug.Log("Pegou o item");
         }
     }
 }

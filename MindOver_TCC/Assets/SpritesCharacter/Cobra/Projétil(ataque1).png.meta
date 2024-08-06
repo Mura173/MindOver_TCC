@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 158593bcc0b1237429b990a56b4cc2b4
+guid: 44106d0af391f4c45b0193cbfeff22ab
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle 1_0
+      name: "Proj\xE9til(ataque1)_0"
       rect:
         serializedVersion: 2
-        x: 45
-        y: 684
-        width: 391
-        height: 483
+        x: 180
+        y: 180
+        width: 256
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f41b113e2258633459bf65907f42d57b
-      internalID: -152434129
+      spriteID: d602087195d2a4f4d8bc88aa46250c45
+      internalID: 525156381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_1
+      name: "Proj\xE9til(ataque1)_1"
       rect:
         serializedVersion: 2
-        x: 571
-        y: 685
-        width: 299
-        height: 482
+        x: 624
+        y: 136
+        width: 332
+        height: 223
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e62bbd5fe9ee16428e0109aebe0b68c
-      internalID: 1779532080
+      spriteID: 265abdb419cd29848a9c96468469541b
+      internalID: 1745176659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle 1_2
+      name: "Proj\xE9til(ataque1)_2"
       rect:
         serializedVersion: 2
-        x: 1076
-        y: 685
-        width: 309
-        height: 482
+        x: 1011
+        y: 99
+        width: 469
+        height: 302
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,71 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a85b1b0eaa909848a14deb376d7890a
-      internalID: -1120216028
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle 1_3
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 63
-        width: 397
-        height: 484
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ffa14d3d851a08746add6010ee48a1d4
-      internalID: -1936113637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle 1_4
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 65
-        width: 308
-        height: 482
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2463c95e5c6dccf4ea84c668562a1e25
-      internalID: -767204100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle 1_5
-      rect:
-        serializedVersion: 2
-        x: 1007
-        y: 63
-        width: 354
-        height: 484
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 753ce127b91daa84682d9dc6762ec66b
-      internalID: 1140105433
+      spriteID: 6ed023366b5728d4184f7d158cb40e45
+      internalID: -1666705363
       vertices: []
       indices: 
       edges: []
@@ -246,12 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle 1_0: -152434129
-      Idle 1_1: 1779532080
-      Idle 1_2: -1120216028
-      Idle 1_3: -1936113637
-      Idle 1_4: -767204100
-      Idle 1_5: 1140105433
+      "Proj\xE9til(ataque1)_0": 525156381
+      "Proj\xE9til(ataque1)_1": 1745176659
+      "Proj\xE9til(ataque1)_2": -1666705363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

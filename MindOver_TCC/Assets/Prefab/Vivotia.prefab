@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5382444780355155563}
   - component: {fileID: 3704536435469609946}
   - component: {fileID: 3171416253535125665}
+  - component: {fileID: 8506069600597433353}
   m_Layer: 0
   m_Name: Vivotia
   m_TagString: Untagged
@@ -123,7 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpPower: 5
+  jumpPower: 4
   jumpTime: 0.35
   jumpTimeCounter: 0
   isJumping: 0
@@ -235,6 +236,18 @@ PolygonCollider2D:
       - {x: 0.055, y: -0.545}
       - {x: 0.085, y: -0.305}
   m_UseDelaunayMesh: 0
+--- !u!114 &8506069600597433353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583847297376547191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d10e666e2ea63242bea6791a89da20e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7293048243136165130
 GameObject:
   m_ObjectHideFlags: 0

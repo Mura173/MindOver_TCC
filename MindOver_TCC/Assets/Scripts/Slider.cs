@@ -21,7 +21,7 @@ public class Slider : MonoBehaviour
 
         if (slider.limitState == JointLimitState2D.UpperLimit)
         {
-            aux.motorSpeed = 1;
+            aux.motorSpeed = -1;
             slider.motor = aux;
         }
     }

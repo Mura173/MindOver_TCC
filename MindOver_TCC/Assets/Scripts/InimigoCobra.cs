@@ -9,12 +9,6 @@ public class InimigoCobra : MonoBehaviour
     public bool isRight = true;
 
     public Transform groundCheck;
-
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
