@@ -59,13 +59,14 @@ public class Character : MonoBehaviour
             {
                 isJumping = false;
             }
-
         }
 
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
         }
+
+        AttackAnim();
     }
 
     void FixedUpdate()
@@ -83,6 +84,19 @@ public class Character : MonoBehaviour
             Vector3 ls = transform.localScale;
             ls.x *= -1f;
             transform.localScale = ls;
+        }
+    }
+
+    private void AttackAnim()
+    {
+        if (Input.GetKey(KeyCode.M))
+        {
+            anim.SetBool("isAttacking", true);
+        }
+
+        if (!Input.GetKey(KeyCode.M))
+        {
+            anim.SetBool("isAttacking", false);
         }
     }
 
