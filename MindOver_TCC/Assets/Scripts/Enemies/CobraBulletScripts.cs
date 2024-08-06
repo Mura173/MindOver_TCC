@@ -9,10 +9,15 @@ public class CobraBulletScripts : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
 
+    public int damage;
+    public CharacterHealth playerHealth;
+
     private float timer;
     // Start is called before the first frame update
     void Start()
     {
+        playerHealth = FindObjectOfType<CharacterHealth>();
+
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 
@@ -38,7 +43,9 @@ public class CobraBulletScripts : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            playerHealth.TakeDamage(damage);
+
+            Destroy(this.gameObject);
         }
     }
 }

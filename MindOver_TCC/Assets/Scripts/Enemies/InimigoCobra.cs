@@ -8,9 +8,6 @@ public class InimigoCobra : MonoBehaviour
     public float distance;
     public bool isRight = true;
 
-    [SerializeField]
-    private int life;
-
     public Transform groundCheck;
     
     void Update()
@@ -32,16 +29,6 @@ public class InimigoCobra : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 180, 0);
                 isRight = true;
             }
-        }
-    }
-
-    public void ReceberDano()
-    {
-        this.life--;
-
-        if (this.life == 0)
-        {
-            GameObject.Destroy(this.gameObject);
         }
     }
 }

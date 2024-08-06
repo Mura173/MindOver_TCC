@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 1715535921350209922}
   - component: {fileID: 3927767878364525086}
   - component: {fileID: 3012561579754224099}
-  m_Layer: 0
+  - component: {fileID: 7687877220730408400}
+  m_Layer: 6
   m_Name: Cobra_Chefe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,6 +233,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullets: {fileID: 816115205331389666, guid: 1071f60961a234a4ca8255338768ccd8, type: 3}
   bulletPos: {fileID: 3756506859395173907}
+--- !u!114 &7687877220730408400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499164976696312184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c367c1e647d9dd479c6b79c36badfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 10
 --- !u!1 &1078799525605712432
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3756506859395173907}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,9 @@ GameObject:
   - component: {fileID: 141148412447960383}
   - component: {fileID: 4495149630892481894}
   - component: {fileID: 5467919990704554964}
-  m_Layer: 0
+  - component: {fileID: 6251989233831054066}
+  - component: {fileID: 1318962270082192638}
+  m_Layer: 6
   m_Name: Cobra_Minion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,3 +188,30 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.515
+--- !u!114 &6251989233831054066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7920462430893338027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c367c1e647d9dd479c6b79c36badfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+--- !u!114 &1318962270082192638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7920462430893338027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3aa5488e125c143bd06075afc06276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  playerHealth: {fileID: 0}

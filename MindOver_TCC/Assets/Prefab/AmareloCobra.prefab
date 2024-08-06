@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 5923494084689803087}
   - component: {fileID: 5697886018960898305}
   - component: {fileID: 3729627817550462917}
-  m_Layer: 0
+  - component: {fileID: -2739559347078620661}
+  - component: {fileID: -5502725676725763529}
+  m_Layer: 6
   m_Name: AmareloCobra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,3 +123,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   speed: 4
+--- !u!114 &-2739559347078620661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331008959409824303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c367c1e647d9dd479c6b79c36badfda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+--- !u!114 &-5502725676725763529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5331008959409824303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3aa5488e125c143bd06075afc06276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  playerHealth: {fileID: 0}

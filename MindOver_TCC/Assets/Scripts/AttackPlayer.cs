@@ -39,7 +39,7 @@ public class AttackPlayer : MonoBehaviour
         if (colliderInimigo != null)
         {
             // Causar dano no inimigo
-            InimigoCobra inimigo = colliderInimigo.GetComponent<InimigoCobra>();
+            EnemyDamageTaken inimigo = colliderInimigo.GetComponent<EnemyDamageTaken>();
 
             if (inimigo != null)
             {

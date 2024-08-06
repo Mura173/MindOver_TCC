@@ -10,6 +10,10 @@ public class Character : MonoBehaviour
     public float speed = 5f;
     bool isGrounded = false;
 
+    bool isAttacking = false;
+    public float attackDuration = 0.7f;
+    float attackTimer = 0.0f;
+
     public float jumpPower = 5f;
     public float jumpTime = 0.35f;
     public float jumpTimeCounter;
@@ -71,7 +75,15 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
-        vivotia.velocity = new Vector2(horizontalInput * speed, vivotia.velocity.y);
+        if (isGrounded)
+        {
+            vivotia.velocity = new Vector2(horizontalInput * speed, vivotia.velocity.y);
+        }
+        else
+        {
+            vivotia.velocity = new Vector2(horizontalInput * speed * 0.9f, vivotia.velocity.y);
+        }
+
         anim.SetFloat("xVelocity", Math.Abs(vivotia.velocity.x));
         anim.SetFloat("yVelocity", vivotia.velocity.y);
     }
@@ -82,21 +94,28 @@ public class Character : MonoBehaviour
         {
             isFacingRight = !isFacingRight;
             Vector3 ls = transform.localScale;
-            ls.x *= -1f;
+            ls.x *= -1;
             transform.localScale = ls;
         }
     }
 
     private void AttackAnim()
     {
-        if (Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M) && !isAttacking)
         {
+            isAttacking = true;
             anim.SetBool("isAttacking", true);
+            attackTimer = attackDuration;
         }
 
-        if (!Input.GetKeyDown(KeyCode.M))
+        if (isAttacking)
         {
-            anim.SetBool("isAttacking", false);
+            attackTimer -= Time.deltaTime;
+            if (attackTimer <= 0)
+            {
+                isAttacking = false;
+                anim.SetBool("isAttacking", false);
+            }
         }
     }
 
