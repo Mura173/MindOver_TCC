@@ -89,12 +89,12 @@ public class Character : MonoBehaviour
 
     private void AttackAnim()
     {
-        if (Input.GetKey(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             anim.SetBool("isAttacking", true);
         }
 
-        if (!Input.GetKey(KeyCode.M))
+        if (!Input.GetKeyDown(KeyCode.M))
         {
             anim.SetBool("isAttacking", false);
         }
