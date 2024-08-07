@@ -46,8 +46,7 @@ public class InimigoCobra : MonoBehaviour
         // Reduz a vida do inimigo
         life.life -= damageAmount;
 
-        // Atualiza o parâmetro DamageTaken no Animator
-        anim.SetBool("DamageTaken", true);
+        StartCoroutine(EnemyGetHurt());
 
         // Opcional: Reiniciar o parâmetro DamageTaken após um tempo
         StartCoroutine(ResetDamageTakenBool());
@@ -60,5 +59,12 @@ public class InimigoCobra : MonoBehaviour
 
         // Reseta o parâmetro DamageTaken
         anim.SetBool("DamageTaken", false);
+    }
+
+    IEnumerator EnemyGetHurt()
+    {
+        GetComponent<Animator>().SetLayerWeight(1, 1);
+        yield return new WaitForSeconds(3);
+        GetComponent<Animator>().SetLayerWeight(1, 0);
     }
 }
