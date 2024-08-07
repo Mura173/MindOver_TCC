@@ -8,8 +8,17 @@ public class InimigoCobra : MonoBehaviour
     public float distance;
     public bool isRight = true;
 
+    Animator anim;
+
+    EnemyDamageTaken life;
+
     public Transform groundCheck;
-    
+
+    void Start()
+    {
+        life = GetComponent<EnemyDamageTaken>();
+    }
+
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -30,5 +39,26 @@ public class InimigoCobra : MonoBehaviour
                 isRight = true;
             }
         }
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        // Reduz a vida do inimigo
+        life.life -= damageAmount;
+
+        // Atualiza o parâmetro DamageTaken no Animator
+        anim.SetBool("DamageTaken", true);
+
+        // Opcional: Reiniciar o parâmetro DamageTaken após um tempo
+        StartCoroutine(ResetDamageTakenBool());
+    }
+
+    private IEnumerator ResetDamageTakenBool()
+    {
+        // Espera o tempo da animação de dano (ajuste o tempo conforme necessário)
+        yield return new WaitForSeconds(0.5f);
+
+        // Reseta o parâmetro DamageTaken
+        anim.SetBool("DamageTaken", false);
     }
 }

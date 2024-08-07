@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyDamageTaken : MonoBehaviour
 {
-    [SerializeField]
-    private int life;
+    public int life;
 
     public void ReceberDano()
     {
