@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4042736061447191210}
   - component: {fileID: 5803576494360653610}
   - component: {fileID: 4621695007165026395}
+  - component: {fileID: 1223785519463146742}
   m_Layer: 0
   m_Name: Col_Roxo
   m_TagString: Colecionavel
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 495396532509351801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.68, y: -3.88, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.13379, y: 0.13379, z: 0.13379}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -152,3 +153,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.511911, y: 6.184221}
   m_EdgeRadius: 0
+--- !u!114 &1223785519463146742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495396532509351801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003372e16e49af345b741d2435ff5621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cm: {fileID: 0}

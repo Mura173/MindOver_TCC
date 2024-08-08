@@ -6,7 +6,7 @@ public class CobraImpulso : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float launchForce = 10f;
-    public float launchAngle = 90f;
+    public float launchAngle = 75f;
 
     private Animator anim;
 

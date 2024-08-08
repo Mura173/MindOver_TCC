@@ -12,7 +12,7 @@ public class CollectableManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        colCount = 3;
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class CollectableManager : MonoBehaviour
     {
         coinText.text = colCount.ToString();
 
-        if(colCount == 3)
+        if(colCount <= 0)
         {
             Destroy(door);
         }
