@@ -13,6 +13,8 @@ public class AttackPlayer : MonoBehaviour
     [SerializeField]
     private LayerMask layersAtaque;
 
+    public ParticleSystem particle;
+
     // Update is called once per frame
     void Update()
     {
@@ -43,6 +45,7 @@ public class AttackPlayer : MonoBehaviour
 
             if (inimigo != null)
             {
+                Instantiate(particle, pontoAtaque.position, particle.transform.rotation);
                 inimigo.ReceberDano();
             }
         }

@@ -21,6 +21,8 @@ public class Character : MonoBehaviour
 
     private Transform posStart;
 
+    public ParticleSystem dust;
+
     [SerializeField]
     bool canJump = false;
 
@@ -52,6 +54,8 @@ public class Character : MonoBehaviour
 
         if (Input.GetButton("Jump") && isJumping == true)
         {
+            CreateDust();
+
             if (jumpTimeCounter > 0)
             {
                 vivotia.velocity = new Vector2(vivotia.velocity.x, jumpPower);
@@ -92,6 +96,7 @@ public class Character : MonoBehaviour
     {
         if(isFacingRight == true && horizontalInput > 0f || !isFacingRight && horizontalInput < 0f)
         {
+            CreateDust();
             isFacingRight = !isFacingRight;
             Vector3 ls = transform.localScale;
             ls.x *= -1;
@@ -117,6 +122,11 @@ public class Character : MonoBehaviour
                 anim.SetBool("isAttacking", false);
             }
         }
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
