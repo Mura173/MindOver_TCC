@@ -3059,11 +3059,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4d467b4d6e5d84287287665d68ba2e, type: 3}
---- !u!198 &1161532130 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 5916261806258505107, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-  m_PrefabInstance: {fileID: 634704633661187145}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1192848033
 GameObject:
   m_ObjectHideFlags: 0
@@ -28424,10 +28419,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vivotia
       objectReference: {fileID: 0}
-    - target: {fileID: 4839602313904242107, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5371129565244458836, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
@@ -28444,10 +28435,6 @@ PrefabInstance:
       propertyPath: hearts.Array.data[3]
       value: 
       objectReference: {fileID: 1067973394}
-    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: dust
-      value: 
-      objectReference: {fileID: 1161532130}
     - target: {fileID: 5603077485772311956, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.42
@@ -28487,18 +28474,6 @@ PrefabInstance:
     - target: {fileID: 5603077485772311956, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916261806258505107, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: ShapeModule.m_Scale.x
-      value: 0.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916261806258505107, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: ShapeModule.m_Scale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5916261806258505107, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: ShapeModule.m_Scale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

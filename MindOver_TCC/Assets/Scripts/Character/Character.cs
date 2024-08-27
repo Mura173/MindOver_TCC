@@ -129,14 +129,14 @@ public class Character : MonoBehaviour
         dust.Play();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         canJump = true;
         isGrounded = true;
         anim.SetBool("isJumping", !isGrounded);
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         canJump = false;
     }
