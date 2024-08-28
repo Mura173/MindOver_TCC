@@ -129,15 +129,21 @@ public class Character : MonoBehaviour
         dust.Play();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        canJump = true;
-        isGrounded = true;
-        anim.SetBool("isJumping", !isGrounded);
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            canJump = true;
+            isGrounded = true;
+            anim.SetBool("isJumping", !isGrounded);
+        }     
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D other)
     {
-        canJump = false;
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            canJump = false;
+        }
     }
 }

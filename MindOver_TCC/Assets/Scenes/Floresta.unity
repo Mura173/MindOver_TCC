@@ -3177,7 +3177,7 @@ GameObject:
   - component: {fileID: 1353623332}
   - component: {fileID: 1353623331}
   - component: {fileID: 1353623333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chaoEParede
   m_TagString: Ground
   m_Icon: {fileID: 0}
