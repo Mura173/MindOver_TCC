@@ -66,7 +66,7 @@ public class CharacterHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Espinhos"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 }
