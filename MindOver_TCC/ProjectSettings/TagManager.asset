@@ -9,6 +9,7 @@ TagManager:
   - Espinhos
   - Cobra
   - Ground
+  - Door
   layers:
   - Default
   - TransparentFX
