@@ -14,6 +14,7 @@ public class InimigoCobra : MonoBehaviour
 
     public Transform groundCheck;
 
+    public Character ch;
     void Start()
     {
         life = GetComponent<EnemyDamageTaken>();
@@ -66,5 +67,22 @@ public class InimigoCobra : MonoBehaviour
         GetComponent<Animator>().SetLayerWeight(1, 1);
         yield return new WaitForSeconds(3);
         GetComponent<Animator>().SetLayerWeight(1, 0);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ch.kbCount = ch.kbTime;
+
+            if (other.transform.position.x <= transform.position.x)
+            {
+                ch.isKnockRight = true;
+            }
+            else if (other.transform.position.x > transform.position.x)
+            {
+                ch.isKnockRight = false;
+            }
+        }
     }
 }

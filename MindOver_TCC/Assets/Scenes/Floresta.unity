@@ -1128,6 +1128,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1913867557}
+    - target: {fileID: 6102733929958143585, guid: 1cac7fd32d4527b4e903e7b70afaaaee, type: 3}
+      propertyPath: ch
+      value: 
+      objectReference: {fileID: 1913867569}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -35988,6 +35992,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b8b49cd2d52354587bd6f60c9f32a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1913867569 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
+  m_PrefabInstance: {fileID: 634704633661187145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722887710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2da5ae9c79a3fa142a68d260cb37f999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1959834217
 GameObject:
   m_ObjectHideFlags: 0
@@ -36149,6 +36164,18 @@ PrefabInstance:
       propertyPath: hearts.Array.data[3]
       value: 
       objectReference: {fileID: 1067973394}
+    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
+      propertyPath: kbTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
+      propertyPath: kbCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
+      propertyPath: kbForce
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5603077485772311956, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.42

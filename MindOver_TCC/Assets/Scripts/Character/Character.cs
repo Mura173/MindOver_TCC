@@ -30,6 +30,13 @@ public class Character : MonoBehaviour
     Rigidbody2D vivotia;
 
     Animator anim;
+
+    public float kbForce;
+    public float kbCount;
+    public float kbTime;
+
+    public bool isKnockRight;
+
     void Start()
     {
         vivotia = GetComponent<Rigidbody2D>();
@@ -79,6 +86,14 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
+        KnockBack();       
+
+        anim.SetFloat("xVelocity", Math.Abs(vivotia.velocity.x));
+        anim.SetFloat("yVelocity", vivotia.velocity.y);
+    }
+
+    void Move()
+    {
         if (isGrounded)
         {
             vivotia.velocity = new Vector2(horizontalInput * speed, vivotia.velocity.y);
@@ -87,14 +102,33 @@ public class Character : MonoBehaviour
         {
             vivotia.velocity = new Vector2(horizontalInput * speed * 0.9f, vivotia.velocity.y);
         }
+    }
 
-        anim.SetFloat("xVelocity", Math.Abs(vivotia.velocity.x));
-        anim.SetFloat("yVelocity", vivotia.velocity.y);
+    void KnockBack()
+    {
+        if (kbCount < 0)
+        {
+            Move();
+        }
+        else
+        {
+            if (isKnockRight == true)
+            {
+                vivotia.velocity = new Vector2(-kbForce, kbForce);
+            }
+
+            if (isKnockRight == false)
+            {
+                vivotia.velocity = new Vector2(kbForce, kbForce);
+            }
+        }
+
+        kbCount -= Time.deltaTime;
     }
 
     void FlipSprite()
     {
-        if(isFacingRight == true && horizontalInput > 0f || !isFacingRight && horizontalInput < 0f)
+        if (isFacingRight == true && horizontalInput > 0f || !isFacingRight && horizontalInput < 0f)
         {
             CreateDust();
             isFacingRight = !isFacingRight;
@@ -136,7 +170,7 @@ public class Character : MonoBehaviour
             canJump = true;
             isGrounded = true;
             anim.SetBool("isJumping", !isGrounded);
-        }     
+        }
     }
 
     private void OnCollisionExit2D(Collision2D other)
