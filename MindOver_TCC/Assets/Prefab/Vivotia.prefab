@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 6056693355123841281}
   - component: {fileID: 4425234018094526839}
   - component: {fileID: 5371129565244458836}
+  - component: {fileID: 7569630258956387631}
   m_Layer: 7
   m_Name: Vivotia
   m_TagString: Player
@@ -213,6 +214,10 @@ MonoBehaviour:
   dust: {fileID: 5916261806258505107}
   canJump: 0
   vivotia: {fileID: 3704536435469609946}
+  kbForce: 4
+  kbCount: 0
+  kbTime: 0.2
+  isKnockRight: 0
 --- !u!50 &3704536435469609946
 Rigidbody2D:
   serializedVersion: 4
@@ -314,6 +319,18 @@ MonoBehaviour:
   - {fileID: 0}
   fullHeart: {fileID: -1732363036, guid: 0ec7605eb0f2f3646b54c0b2b72f5d78, type: 3}
   emptyHeart: {fileID: 736863262, guid: 0ec7605eb0f2f3646b54c0b2b72f5d78, type: 3}
+--- !u!114 &7569630258956387631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583847297376547191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b8b49cd2d52354587bd6f60c9f32a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2581113824565791837
 GameObject:
   m_ObjectHideFlags: 0

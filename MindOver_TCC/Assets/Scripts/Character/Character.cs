@@ -14,6 +14,8 @@ public class Character : MonoBehaviour
     public float attackDuration = 0.7f;
     float attackTimer = 0.0f;
 
+    [SerializeField]
+    private GameObject groundCheck;
     public float jumpPower = 5f;
     public float jumpTime = 0.35f;
     public float jumpTimeCounter;
@@ -26,7 +28,6 @@ public class Character : MonoBehaviour
     [SerializeField]
     bool canJump = false;
 
-    [SerializeField]
     Rigidbody2D vivotia;
 
     Animator anim;
@@ -52,6 +53,33 @@ public class Character : MonoBehaviour
 
         FlipSprite();
 
+        Jump();
+
+        AttackAnim();
+    }
+
+    void FixedUpdate()
+    {
+        KnockBack();       
+
+        anim.SetFloat("xVelocity", Math.Abs(vivotia.velocity.x));
+        anim.SetFloat("yVelocity", vivotia.velocity.y);
+    }
+
+    void Move()
+    {
+        if (isGrounded)
+        {
+            vivotia.velocity = new Vector2(horizontalInput * speed, vivotia.velocity.y);
+        }
+        else
+        {
+            vivotia.velocity = new Vector2(horizontalInput * speed * 0.9f, vivotia.velocity.y);
+        }
+    }
+
+    void Jump()
+    {
         if (Input.GetButtonDown("Jump") && canJump == true)
         {
             isJumping = true;
@@ -79,28 +107,6 @@ public class Character : MonoBehaviour
         if (Input.GetButtonUp("Jump"))
         {
             isJumping = false;
-        }
-
-        AttackAnim();
-    }
-
-    void FixedUpdate()
-    {
-        KnockBack();       
-
-        anim.SetFloat("xVelocity", Math.Abs(vivotia.velocity.x));
-        anim.SetFloat("yVelocity", vivotia.velocity.y);
-    }
-
-    void Move()
-    {
-        if (isGrounded)
-        {
-            vivotia.velocity = new Vector2(horizontalInput * speed, vivotia.velocity.y);
-        }
-        else
-        {
-            vivotia.velocity = new Vector2(horizontalInput * speed * 0.9f, vivotia.velocity.y);
         }
     }
 
@@ -165,7 +171,17 @@ public class Character : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = true;
             isGrounded = true;
@@ -173,9 +189,9 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = false;
         }
