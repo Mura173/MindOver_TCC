@@ -146,10 +146,11 @@ public class Character : MonoBehaviour
 
     private void AttackAnim()
     {
-        if (Input.GetKeyDown(KeyCode.M) && !isAttacking)
+        if (Input.GetKeyDown(KeyCode.Z) && !isAttacking)
         {
             isAttacking = true;
             anim.SetBool("isAttacking", true);
+            anim.SetBool("isJumping", false);
             attackTimer = attackDuration;
         }
 
@@ -167,16 +168,6 @@ public class Character : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
-    }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        
-    }
-
-    private void OnCollisionExit2D(Collision2D other)
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
