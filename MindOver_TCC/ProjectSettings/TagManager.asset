@@ -10,6 +10,7 @@ TagManager:
   - Cobra
   - Ground
   - Door
+  - Skeleton
   layers:
   - Default
   - TransparentFX
