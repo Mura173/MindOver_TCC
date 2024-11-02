@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class CobraChefe : MonoBehaviour
 {
@@ -38,6 +39,6 @@ public class CobraChefe : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bullets, bulletPos.position, Quaternion.identity);
+        Instantiate(bullets, bulletPos.position, Quaternion.Euler(0f, 0f, 90f));
     }
 }
