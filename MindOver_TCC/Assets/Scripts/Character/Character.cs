@@ -170,9 +170,9 @@ public class Character : MonoBehaviour
         dust.Play();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             canJump = true;
             isGrounded = true;
@@ -180,9 +180,9 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             canJump = false;
         }

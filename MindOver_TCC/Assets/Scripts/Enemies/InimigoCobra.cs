@@ -8,6 +8,8 @@ public class InimigoCobra : MonoBehaviour
     public float distance;
     public bool isRight = true;
 
+    private Rigidbody2D rb;
+
     Animator anim;
 
     EnemyDamageTaken life;
@@ -15,9 +17,11 @@ public class InimigoCobra : MonoBehaviour
     public Transform groundCheck;
 
     public Character ch;
+
     void Start()
     {
         life = GetComponent<EnemyDamageTaken>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -45,7 +49,7 @@ public class InimigoCobra : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         // Reduz a vida do inimigo
-        life.life -= damageAmount;
+        life.life -= damageAmount;       
 
         StartCoroutine(EnemyGetHurt());
 
@@ -57,9 +61,6 @@ public class InimigoCobra : MonoBehaviour
     {
         // Espera o tempo da animação de dano (ajuste o tempo conforme necessário)
         yield return new WaitForSeconds(0.5f);
-
-        // Reseta o parâmetro DamageTaken
-        anim.SetBool("DamageTaken", false);
     }
 
     IEnumerator EnemyGetHurt()
