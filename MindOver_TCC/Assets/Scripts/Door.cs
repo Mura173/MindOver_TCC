@@ -22,7 +22,7 @@ public class Door : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && estanaPorta == true)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
     }
 
