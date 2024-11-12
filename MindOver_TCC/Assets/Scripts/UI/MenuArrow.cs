@@ -9,15 +9,19 @@ public class MenuArrow : MonoBehaviour
     public Image arrow;
     public GameObject buttonPanel;
 
-    private bool isPlay = true;
+    private bool isPlay;
     private bool isInStart;
 
     public Animator panelButtonAnim, textAnim, bgAnim, arrowAnim;
 
-    public float xAnch, yAnch;
+    public float xAnchUp, yAnchUp;
+    public float xAnchDown, yAnchDown;
+
+    private LevelLoader levelLoader;
 
     private void Start()
     {
+        levelLoader = FindAnyObjectByType<LevelLoader>();
         isInStart = true;
     }
 
@@ -32,7 +36,7 @@ public class MenuArrow : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Z) && isPlay == true)
             {
-                // SceneManager.LoadScene(1);
+                levelLoader.LoadNextLevel();
             }
 
             if (Input.GetKey(KeyCode.Z) && isPlay == false)
@@ -46,13 +50,13 @@ public class MenuArrow : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            arrow.rectTransform.anchoredPosition = new Vector2(-170, -930);
+            arrow.rectTransform.anchoredPosition = new Vector2(yAnchDown, xAnchDown);
             isPlay = false;
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            arrow.rectTransform.anchoredPosition = new Vector2(yAnch, xAnch);
+            arrow.rectTransform.anchoredPosition = new Vector2(yAnchUp, xAnchUp);
 
             isPlay = true;
         }
@@ -83,5 +87,6 @@ public class MenuArrow : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         arrowAnim.SetBool("go", true);
+        isPlay = true;
     }
 }
