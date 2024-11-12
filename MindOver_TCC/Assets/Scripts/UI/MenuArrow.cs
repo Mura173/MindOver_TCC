@@ -9,7 +9,7 @@ public class MenuArrow : MonoBehaviour
     public Image arrow;
     public GameObject buttonPanel;
 
-    private bool isPlay;
+    private bool isPlay, isQuit;
     private bool isInStart;
 
     public Animator panelButtonAnim, textAnim, bgAnim, arrowAnim;
@@ -39,7 +39,7 @@ public class MenuArrow : MonoBehaviour
                 levelLoader.LoadNextLevel();
             }
 
-            if (Input.GetKey(KeyCode.Z) && isPlay == false)
+            if (Input.GetKey(KeyCode.Z) && isQuit == true)
             {
                 Application.Quit();
             }
@@ -52,13 +52,14 @@ public class MenuArrow : MonoBehaviour
         {
             arrow.rectTransform.anchoredPosition = new Vector2(yAnchDown, xAnchDown);
             isPlay = false;
+            isQuit = true;
         }
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
             arrow.rectTransform.anchoredPosition = new Vector2(yAnchUp, xAnchUp);
-
             isPlay = true;
+            isQuit = false;
         }
     }
 
