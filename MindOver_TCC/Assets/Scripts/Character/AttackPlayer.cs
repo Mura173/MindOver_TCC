@@ -11,17 +11,22 @@ public class AttackPlayer : MonoBehaviour
     private float raioAtaque;
 
     [SerializeField]
+    private bool canAttack = true;
+
+    [SerializeField]
     private LayerMask layersAtaque;
 
     public ParticleSystem particle;
 
+    public InimigoCobra inimigoCobra;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (canAttack && Input.GetKeyDown(KeyCode.Z))
         {
-            Atacar();
-        }
+            StartCoroutine(Attack());
+        }      
     }
 
     // Desenhar coisas na Unity
@@ -49,5 +54,13 @@ public class AttackPlayer : MonoBehaviour
                 inimigo.ReceberDano();
             }
         }
+    }
+
+    IEnumerator Attack()
+    {
+        Atacar();
+        canAttack = false;
+        yield return new WaitForSeconds(1);
+        canAttack = true;
     }
 }
