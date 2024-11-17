@@ -43,4 +43,21 @@ public class Novelo : MonoBehaviour
             isGrounded = true;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("ColliderNovelo"))
+        {
+            speed = -speed;
+
+            if (speed > 0)
+            {
+                transform.eulerAngles = new Vector3(0, 0, 0); // Olhar para a direita
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0); // Olhar para a esquerda
+            }
+        }
+    }
 }

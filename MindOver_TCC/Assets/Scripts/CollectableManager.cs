@@ -8,12 +8,22 @@ public class CollectableManager : MonoBehaviour
 {
     public int colCount;
     public Text coinText;
-    public GameObject door;
+
+    [System.Serializable]
+    public class DoorRequirement
+    {
+        public GameObject door;
+        public int collectableRequirement;
+    }
+
+    public List<DoorRequirement> doors;
+
+    private int currentDoorIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        colCount = 3;
+        coinText.text = colCount.ToString();
     }
 
     // Update is called once per frame
@@ -21,9 +31,17 @@ public class CollectableManager : MonoBehaviour
     {
         coinText.text = colCount.ToString();
 
-        if(colCount <= 0)
+        if (currentDoorIndex < doors.Count &&
+            colCount <= doors[currentDoorIndex].collectableRequirement)
         {
-            Destroy(door);
+            DestroyDoor();
         }
+    }
+
+    private void DestroyDoor()
+    {
+        Destroy(doors[currentDoorIndex].door);
+
+        currentDoorIndex++;
     }
 }

@@ -11,6 +11,9 @@ TagManager:
   - Ground
   - Door
   - Skeleton
+  - ColliderDir
+  - ColliderEsq
+  - ColliderNovelo
   layers:
   - Default
   - TransparentFX

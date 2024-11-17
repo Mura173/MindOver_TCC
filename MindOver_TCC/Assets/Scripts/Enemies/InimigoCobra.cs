@@ -26,6 +26,8 @@ public class InimigoCobra : MonoBehaviour
 
     void Update()
     {
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+
         // Posicao de origem, direcao e distancia
         RaycastHit2D ground = Physics2D.Raycast(groundCheck.position, Vector2.down, distance);
 
