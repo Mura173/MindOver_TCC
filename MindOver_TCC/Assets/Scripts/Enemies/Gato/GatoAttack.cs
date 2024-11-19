@@ -22,10 +22,15 @@ public class GatoAttack : MonoBehaviour
 
     private bool isFacingRight = true;
 
+    private GameObject placaDeAtencao;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+        placaDeAtencao = GameObject.Find("Atencao");
+        
+        placaDeAtencao.SetActive(false);
     }
 
     void Update()
@@ -56,11 +61,13 @@ public class GatoAttack : MonoBehaviour
     IEnumerator Attack()
     {
         isAttacking = true;
+        placaDeAtencao.SetActive(true);
         anim.SetBool("atkcurto", true);
         yield return new WaitForSeconds(1f); // Duracao da animacao
         anim.SetBool("atkcurto", false);
         anim.SetBool("attackingCurto", true);  
         AtkCurto();
+        placaDeAtencao.SetActive(false);
         yield return new WaitForSeconds(1f);
         anim.SetBool("attackingCurto", false);
         yield return new WaitForSeconds(3f); // Tempo de recarga do ataque
