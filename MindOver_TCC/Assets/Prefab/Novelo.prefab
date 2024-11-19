@@ -164,5 +164,5 @@ MonoBehaviour:
   jumpForce: 7
   speed: -3
   jumpInterval: 2.5
-  damage: 0
+  damage: 1
   playerHealth: {fileID: 0}
