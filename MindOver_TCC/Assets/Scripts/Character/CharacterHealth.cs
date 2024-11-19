@@ -35,7 +35,7 @@ public class CharacterHealth : MonoBehaviour
 
         if(health <= 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
@@ -45,7 +45,7 @@ public class CharacterHealth : MonoBehaviour
 
         if (health <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         else
         {

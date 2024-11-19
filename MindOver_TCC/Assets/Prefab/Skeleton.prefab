@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5670647992069790965}
   - component: {fileID: 916807136265370474}
   - component: {fileID: 8920654408632259027}
-  - component: {fileID: 272809479551772030}
-  m_Layer: 0
+  - component: {fileID: 2108834513532320883}
+  m_Layer: 6
   m_Name: Skeleton
   m_TagString: Skeleton
   m_Icon: {fileID: 0}
@@ -151,7 +151,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &272809479551772030
+--- !u!114 &2108834513532320883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,10 +160,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1087108002871300381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89de49d231df9f944bf2e82f88b88c60, type: 3}
+  m_Script: {fileID: 11500000, guid: 561255798f2d910428063e88199d7b2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullets: {fileID: 695533570228204747, guid: d3b4a476cee82ff4894d8f7e0797bc90, type: 3}
+  bullet: {fileID: 695533570228204747, guid: d3b4a476cee82ff4894d8f7e0797bc90, type: 3}
   bulletPos: {fileID: 5329297697574442320}
 --- !u!1 &2839201031017992637
 GameObject:
@@ -174,7 +174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5329297697574442320}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BulletPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}

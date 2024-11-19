@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1437ad3287397bc4cad3be02518f082f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colCount: 0
+  colCount: 4
   coinText: {fileID: 0}
-  door: {fileID: 0}
+  doors:
+  - door: {fileID: 0}
+    collectableRequirement: 2
+  - door: {fileID: 0}
+    collectableRequirement: 2
+  - door: {fileID: 0}
+    collectableRequirement: 0

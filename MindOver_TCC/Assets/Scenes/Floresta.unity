@@ -1345,7 +1345,7 @@ Transform:
   m_GameObject: {fileID: 510238327}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.99, y: -4.32, z: 0.03322843}
+  m_LocalPosition: {x: 94.9, y: -8, z: 0.03322843}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1362,14 +1362,6 @@ PrefabInstance:
     - target: {fileID: 499164976696312184, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
       propertyPath: m_Name
       value: Cobra_Chefe
-      objectReference: {fileID: 0}
-    - target: {fileID: 1715535921350209922, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
-      propertyPath: m_Constraints
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3927767878364525086, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4073845720948999511, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1411,16 +1403,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6921755156783517218, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7687877220730408400, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
-      propertyPath: life
-      value: 5
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3927767878364525086, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7845,7 +7828,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8254574043996164163, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,18 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CobraBulletScripts : MonoBehaviour
+public class ArrowBullet : MonoBehaviour
 {
     private GameObject player;
     private Rigidbody2D rb;
+
     public float force;
+    private float timer;
 
     public int damage;
     public CharacterHealth playerHealth;
-
-    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +24,8 @@ public class CobraBulletScripts : MonoBehaviour
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
 
-        float rot = MathF.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, rot + 90);
+        float rot = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rot);
     }
 
     // Update is called once per frame
@@ -34,19 +33,19 @@ public class CobraBulletScripts : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer > 10)
+        if (timer > 10)
         {
             Destroy(gameObject);
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             playerHealth.TakeDamage(damage);
 
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

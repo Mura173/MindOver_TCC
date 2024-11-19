@@ -12,6 +12,9 @@ public class Novelo : MonoBehaviour
     public float jumpInterval = 1f;
     private float jumpTimer;
 
+    public int damage;
+    public CharacterHealth playerHealth;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +44,11 @@ public class Novelo : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+        }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerHealth.TakeDamage(damage);
         }
     }
 
