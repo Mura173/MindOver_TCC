@@ -26,7 +26,7 @@ public class AttackPlayer : MonoBehaviour
         if (canAttack && Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(Attack());
-        }      
+        }
     }
 
     // Desenhar coisas na Unity
