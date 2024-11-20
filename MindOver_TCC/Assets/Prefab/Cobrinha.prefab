@@ -129,9 +129,6 @@ MonoBehaviour:
   isRight: 1
   groundCheck: {fileID: 7098187642430322114}
   ch: {fileID: 0}
-  kbForce: 4
-  kbCount: 0
-  isKnockRight: 0
 --- !u!114 &3332974600061104326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 2
+  smoke: {fileID: 5902247082284789577, guid: 9c8f5b4f0381c384cabb7b4fc2e0ced7, type: 3}
 --- !u!50 &936965285824788672
 Rigidbody2D:
   serializedVersion: 4

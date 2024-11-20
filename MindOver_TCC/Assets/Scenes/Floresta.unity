@@ -1817,6 +1817,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caixa (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8890850362142741471, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.408805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890850362142741471, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.408805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890850362142741471, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.408805
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5842298766901597436, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
     m_RemovedGameObjects: []
@@ -36258,6 +36270,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1913867557}
+    - target: {fileID: 124829882850766302, guid: 6f8159bb28549974c9d331cd21fc005a, type: 3}
+      propertyPath: smoke
+      value: 
+      objectReference: {fileID: 5902247082284789577, guid: 9c8f5b4f0381c384cabb7b4fc2e0ced7, type: 3}
     - target: {fileID: 5331008959409824303, guid: 6f8159bb28549974c9d331cd21fc005a, type: 3}
       propertyPath: m_Name
       value: AmareloCobra

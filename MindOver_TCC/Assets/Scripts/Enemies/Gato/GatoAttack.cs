@@ -17,12 +17,15 @@ public class GatoAttack : MonoBehaviour
     private Animator anim;
 
     private GameObject player;
+    public float speed;
+
     public int damage;
     public CharacterHealth playerHealth;
 
     private bool isFacingRight = true;
 
     private GameObject placaDeAtencao;
+    public Animator doorAnim;
 
     void Start()
     {
@@ -42,6 +45,11 @@ public class GatoAttack : MonoBehaviour
         {
             StartCoroutine(Attack());
         }
+
+        if (Input.GetKeyDown(KeyCode.L)) // Apenas para teste
+        {
+            AtkLongo();
+        }
     }
 
     void AtkCurto()
@@ -58,6 +66,28 @@ public class GatoAttack : MonoBehaviour
         }
     }
 
+    void AtkLongo()
+    {
+        Collider2D gatoCollider = GetComponent<Collider2D>();
+
+        if (gatoCollider is CapsuleCollider2D capsuleCollider)
+        {
+            capsuleCollider.size = new Vector2(capsuleCollider.size.x / 2, capsuleCollider.size.y / 2); // Reduz pela metade
+        }
+
+        // Ativar o Trail Renderer
+        TrailRenderer trail = GetComponent<TrailRenderer>();
+        if (trail != null)
+        {
+            trail.enabled = true;
+        }
+
+        transform.position = player.transform.position;
+
+        StartCoroutine(DisableTrailAfterTime(trail));
+        StartCoroutine(RestoreColliderSize(gatoCollider));
+    }
+
     IEnumerator Attack()
     {
         isAttacking = true;
@@ -70,8 +100,38 @@ public class GatoAttack : MonoBehaviour
         placaDeAtencao.SetActive(false);
         yield return new WaitForSeconds(1f);
         anim.SetBool("attackingCurto", false);
-        yield return new WaitForSeconds(3f); // Tempo de recarga do ataque
+        yield return new WaitForSeconds(2f); // Tempo de recarga do ataque
+        anim.SetBool("atkLongo", true);
+        yield return new WaitForSeconds(1f);
+        AtkLongo();
+        placaDeAtencao.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("atkLongo", false);
+        anim.SetBool("attackingCurto", true);
+        AtkCurto();
+        placaDeAtencao.SetActive(false);
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("attackingCurto", false);
         isAttacking = false;
+    }
+
+    IEnumerator DisableTrailAfterTime(TrailRenderer trail)
+    {
+        yield return new WaitForSeconds(0.2f);
+        if (trail != null)
+        {
+            trail.enabled = false;
+        }
+    }
+
+    IEnumerator RestoreColliderSize(Collider2D gatoCollider)
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (gatoCollider is CapsuleCollider2D capsuleCollider)
+        {
+            capsuleCollider.size = new Vector2(capsuleCollider.size.x * 2, capsuleCollider.size.y * 2); // Restaura o tamanho original
+        }
     }
 
     private void OnDrawGizmos()
@@ -102,5 +162,12 @@ public class GatoAttack : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+
+    private void OnDestroy()
+    {
+        doorAnim.SetBool("close", false);
+        doorAnim.SetBool("open", true);
+        placaDeAtencao.SetActive(false);
     }
 }
