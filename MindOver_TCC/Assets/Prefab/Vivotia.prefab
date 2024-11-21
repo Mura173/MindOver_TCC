@@ -201,6 +201,8 @@ MonoBehaviour:
   kbCount: 0
   kbTime: 0.2
   isKnockRight: 0
+  hasTakenDamage: 0
+  isKnockedBack: 0
 --- !u!114 &4425234018094526839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +222,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   particle: {fileID: 1570830311169766731, guid: 230978ef99815be46a4b87efdeca2947, type: 3}
-  inimigoCobra: {fileID: 0}
 --- !u!114 &5371129565244458836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,8 +257,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorSprite: {fileID: 0}
   portaAberta: 0
-  spriteClosed: {fileID: 0}
-  spriteOpened: {fileID: 0}
+  spriteClosed: {fileID: 1418779309, guid: 77e1056feef1b8649a490d7fac2439fd, type: 3}
+  spriteOpened: {fileID: 1217172565, guid: 77e1056feef1b8649a490d7fac2439fd, type: 3}
+  sceneManagement: {fileID: 0}
 --- !u!61 &837278392629792981
 BoxCollider2D:
   m_ObjectHideFlags: 0

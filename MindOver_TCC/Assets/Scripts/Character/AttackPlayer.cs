@@ -18,8 +18,6 @@ public class AttackPlayer : MonoBehaviour
 
     public ParticleSystem particle;
 
-    public InimigoCobra inimigoCobra;
-
     // Update is called once per frame
     void Update()
     {

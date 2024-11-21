@@ -15,6 +15,8 @@ public class Door : MonoBehaviour
     public Sprite spriteClosed;
     public Sprite spriteOpened;
 
+    public SceneManagement sceneManagement;
+
     void Awake()
     {
         letterE = GameObject.Find("letterE");
@@ -27,7 +29,7 @@ public class Door : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.E) && estanaPorta == true)
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(sceneManagement.sceneIndex + 1);
         }
 
         if (estanaPorta == false)

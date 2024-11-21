@@ -36,6 +36,8 @@ public class Character : MonoBehaviour
     public float kbTime;
 
     public bool isKnockRight;
+    public bool hasTakenDamage = false;
+    public bool isKnockedBack = false;
 
     void Start()
     {
@@ -59,7 +61,15 @@ public class Character : MonoBehaviour
 
     void FixedUpdate()
     {
-        KnockBack();       
+        if (!isKnockedBack)
+        {
+            Move();
+        }
+
+        if (hasTakenDamage)
+        {
+            KnockBack();
+        }
 
         anim.SetFloat("xVelocity", Math.Abs(vivotia.velocity.x));
         anim.SetFloat("yVelocity", vivotia.velocity.y);
@@ -115,14 +125,15 @@ public class Character : MonoBehaviour
         {
             Move();
         }
+
         else
         {
-            if (isKnockRight == true)
+            if (isKnockRight)
             {
                 vivotia.velocity = new Vector2(-kbForce, kbForce);
             }
 
-            if (isKnockRight == false)
+            else
             {
                 vivotia.velocity = new Vector2(kbForce, kbForce);
             }

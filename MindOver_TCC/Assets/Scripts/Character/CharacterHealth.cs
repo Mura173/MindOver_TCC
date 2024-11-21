@@ -15,10 +15,13 @@ public class CharacterHealth : MonoBehaviour
 
     public Sprite emptyHeart;
 
+    private Character character;
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        character = GetComponent<Character>();
     }
 
     void Update()
@@ -41,6 +44,8 @@ public class CharacterHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        character.hasTakenDamage = true;
+        character.isKnockedBack = true;
         health -= damage;
 
         if (health <= 0)
@@ -67,6 +72,15 @@ public class CharacterHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Espinhos"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coracao"))
+        {
+            health = maxHealth;
+            Destroy(other.gameObject);
         }
     }
 }
