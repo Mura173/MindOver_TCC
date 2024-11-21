@@ -201,6 +201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  smoke: {fileID: 5902247082284789577, guid: 9c8f5b4f0381c384cabb7b4fc2e0ced7, type: 3}
+  knockbackForce: 5
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageDuration: 0.5
 --- !u!114 &1318962270082192638
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,6 +27,8 @@ public class GatoAttack : MonoBehaviour
     private GameObject placaDeAtencao;
     public Animator doorAnim;
 
+    public Door doorScript;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -44,11 +46,6 @@ public class GatoAttack : MonoBehaviour
         if (colliderPlayer != null && !isAttacking)
         {
             StartCoroutine(Attack());
-        }
-
-        if (Input.GetKeyDown(KeyCode.L)) // Apenas para teste
-        {
-            AtkLongo();
         }
     }
 
@@ -169,5 +166,6 @@ public class GatoAttack : MonoBehaviour
         doorAnim.SetBool("close", false);
         doorAnim.SetBool("open", true);
         placaDeAtencao.SetActive(false);
+        doorScript.portaAberta = true;
     }
 }

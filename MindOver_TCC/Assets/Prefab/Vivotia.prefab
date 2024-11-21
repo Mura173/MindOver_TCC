@@ -191,7 +191,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   attackDuration: 0.7
-  groundCheck: {fileID: 0}
   jumpPower: 4
   jumpTime: 0.35
   jumpTimeCounter: 0
@@ -216,10 +215,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pontoAtaque: {fileID: 335297594031195269}
   raioAtaque: 1.45
+  canAttack: 1
   layersAtaque:
     serializedVersion: 2
     m_Bits: 64
   particle: {fileID: 1570830311169766731, guid: 230978ef99815be46a4b87efdeca2947, type: 3}
+  inimigoCobra: {fileID: 0}
 --- !u!114 &5371129565244458836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +254,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37b8b49cd2d52354587bd6f60c9f32a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorSprite: {fileID: 0}
+  portaAberta: 0
+  spriteClosed: {fileID: 0}
+  spriteOpened: {fileID: 0}
 --- !u!61 &837278392629792981
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -323,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 2581113824565791837}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06, y: -0.12, z: 0}
+  m_LocalPosition: {x: 1.2, y: -0.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -15,7 +15,6 @@ public class Character : MonoBehaviour
     float attackTimer = 0.0f;
 
     [SerializeField]
-    private GameObject groundCheck;
     public float jumpPower = 5f;
     public float jumpTime = 0.35f;
     public float jumpTimeCounter;

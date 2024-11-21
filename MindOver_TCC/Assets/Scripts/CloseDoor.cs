@@ -10,8 +10,15 @@ public class CloseDoor : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            doorAnim.SetBool("close", true);
-            Destroy(gameObject);
+            StartCoroutine(DestroyDoor());
         }
+    }
+
+    IEnumerator DestroyDoor()
+    {
+        doorAnim.SetBool("open", false);
+        doorAnim.SetBool("close", true);
+        yield return new WaitForSeconds(2);
+        Destroy(gameObject);
     }
 }

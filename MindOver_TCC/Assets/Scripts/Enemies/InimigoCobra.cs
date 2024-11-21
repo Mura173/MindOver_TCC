@@ -48,19 +48,9 @@ public class InimigoCobra : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        // Reduz a vida do inimigo
         life.life -= damageAmount;       
 
         StartCoroutine(EnemyGetHurt());
-
-        // Opcional: Reiniciar o parâmetro DamageTaken após um tempo
-        StartCoroutine(ResetDamageTakenBool());
-    }
-
-    private IEnumerator ResetDamageTakenBool()
-    {
-        // Espera o tempo da animação de dano (ajuste o tempo conforme necessário)
-        yield return new WaitForSeconds(0.5f);
     }
 
     IEnumerator EnemyGetHurt()

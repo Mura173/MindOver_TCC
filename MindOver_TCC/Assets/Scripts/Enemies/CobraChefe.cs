@@ -9,6 +9,11 @@ public class CobraChefe : MonoBehaviour
 
     private float timer;
     private GameObject player;
+
+    private bool isFacingRight;
+
+    public Door doorScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +23,8 @@ public class CobraChefe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckPlayerPosition();
+
         timer += Time.deltaTime;
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
@@ -38,5 +45,32 @@ public class CobraChefe : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullets, bulletPos.position, Quaternion.Euler(0f, 0f, 90f));
+    }
+
+    void CheckPlayerPosition()
+    {
+        if (player.transform.position.x < transform.position.x && isFacingRight)
+        {
+            FlipSprite();
+        }
+        else if (player.transform.position.x > transform.position.x && !isFacingRight)
+        {
+            FlipSprite();
+        }
+    }
+
+    void FlipSprite()
+    {
+        isFacingRight = !isFacingRight;
+
+        // Inverte a escala no eixo X para flipar o sprite
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1;
+        transform.localScale = localScale;
+    }
+
+    private void OnDestroy()
+    {
+        doorScript.portaAberta = true;
     }
 }

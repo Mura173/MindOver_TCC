@@ -40,7 +40,7 @@ public class AttackPlayer : MonoBehaviour
 
     private void Atacar()
     {
-        // Verifica se existe um colisor na região do raio
+        // Verifica se existe um colisor na regiao do raio
         Collider2D colliderInimigo = Physics2D.OverlapCircle(this.pontoAtaque.position, this.raioAtaque, this.layersAtaque);
 
         if (colliderInimigo != null)
@@ -51,7 +51,8 @@ public class AttackPlayer : MonoBehaviour
             if (inimigo != null)
             {
                 Instantiate(particle, pontoAtaque.position, particle.transform.rotation);
-                inimigo.ReceberDano();
+                Vector2 knockbackDirection = (colliderInimigo.transform.position - this.pontoAtaque.position).normalized;
+                inimigo.ReceberDano(knockbackDirection);
             }
         }
     }

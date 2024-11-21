@@ -8,7 +8,12 @@ public class Door : MonoBehaviour
     private GameObject letterE;
     private GameObject door;
 
+    public SpriteRenderer doorSprite;
     private bool estanaPorta;
+    public bool portaAberta;
+
+    public Sprite spriteClosed;
+    public Sprite spriteOpened;
 
     void Awake()
     {
@@ -24,14 +29,23 @@ public class Door : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+
+        if (estanaPorta == false)
+        {
+            doorSprite.sprite = spriteClosed;
+        }
+
+        if (portaAberta == true)
+        {
+            doorSprite.sprite = spriteOpened;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Door"))
+        if (other.gameObject.CompareTag("Door") && portaAberta == true)
         {
             letterE.SetActive(true);
-
             estanaPorta = true;
         }
     }
@@ -41,7 +55,6 @@ public class Door : MonoBehaviour
         if (other.gameObject.CompareTag("Door"))
         {
             letterE.SetActive(false);
-
             estanaPorta = false;
         }
     }
