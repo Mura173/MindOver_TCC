@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/1_Quadrinho.unity
     guid: 4546211a0c3d2e34886a0c7fb722fed5
   - enabled: 1
-    path: Assets/Scenes/2_Floresta.unity
+    path: Assets/Scenes/2_Tutorial.unity
+    guid: 30d3979cd23019f49a678363597660f7
+  - enabled: 1
+    path: Assets/Scenes/3_Floresta.unity
     guid: 0c71358d43580e74f910afcba930dfac
   - enabled: 1
-    path: Assets/Scenes/3_Cerejeira.unity
+    path: Assets/Scenes/4_Cerejeira.unity
     guid: ebab634cde6765547b652717efee681b
   - enabled: 1
-    path: Assets/Scenes/4_Raiva.unity
+    path: Assets/Scenes/5_Raiva.unity
     guid: 0a36b76b414160440bb63a2f1f74d994
   m_configObjects: {}
