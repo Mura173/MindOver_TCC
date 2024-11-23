@@ -10,10 +10,13 @@ public class MinionFogo : MonoBehaviour
     private bool isFacingRight = false;
     private GameObject player;
 
+    private BossFogo bossFogo;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        bossFogo = FindObjectOfType<BossFogo>();
     }
 
     void Update()
@@ -29,10 +32,22 @@ public class MinionFogo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.CompareTag("ChefeFogo"))
+        {
+            bossFogo.height++;
+            bossFogo.AumentarObjeto();
+            Destroy(gameObject);
+        }
+
         if (other.gameObject.CompareTag("Foguinho"))
         {
-            Instantiate(smokeParticle, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            Physics2D.IgnoreCollision(other.collider, GetComponent<Collider2D>());
+        }
+
+        if (other.gameObject.layer == 10)
+        {
+            FlipSprite();
+            speed = -speed;
         }
     }
 
