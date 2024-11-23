@@ -216,12 +216,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pontoAtaque: {fileID: 335297594031195269}
-  raioAtaque: 1.45
+  raioAtaque: 1.43
   canAttack: 1
   layersAtaque:
     serializedVersion: 2
     m_Bits: 64
   particle: {fileID: 1570830311169766731, guid: 230978ef99815be46a4b87efdeca2947, type: 3}
+  audioSource: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: 007f82e37e94efc41b401208edacb8e7, type: 3}
+  - {fileID: 8300000, guid: da6cdc92e8ab3684989751809ff56805, type: 3}
+  - {fileID: 8300000, guid: 1571c2fb5f1b73b49b428031cbe8be87, type: 3}
 --- !u!114 &5371129565244458836
 MonoBehaviour:
   m_ObjectHideFlags: 0

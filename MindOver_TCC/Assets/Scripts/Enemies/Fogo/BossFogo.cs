@@ -1,51 +1,70 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class BossFogo : MonoBehaviour
 {
-    public GameObject foguinhoL;
-    public Transform instantiatePoint;
-
+    private Rigidbody2D rb;
     private GameObject player;
-
     private bool isFacingRight = false;
+    private bool canMove = false;
 
+    public GameObject foguinho;
+    public Transform instantiatePoint;
     public float speed;
 
-    // Start is called before the first frame update
+    public int damage;
+    public CharacterHealth playerHealth;
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
         CheckPlayerPosition();
 
+        // Inicia o ataque ao pressionar a tecla "L"
         if (Input.GetKeyDown(KeyCode.L))
         {
             Attacking();
+        }
+
+        // Se permitido, movimenta o BossFogo na direção do jogador
+        if (canMove)
+        {
+            MoveTowardsPlayer();
         }
     }
 
     public void Attacking()
     {
-        StartCoroutine(Attack());
+        StartCoroutine(Spawn());
     }
 
-    public IEnumerator Attack()
+    public IEnumerator Spawn()
     {
-        Instantiate(foguinhoL, instantiatePoint.transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(5);
-        Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        yield return new WaitForSeconds(1f);
+
+        for (int i = 0; i < 3; i++)
+        {
+            Instantiate(foguinho, instantiatePoint.transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(1.5f);
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        canMove = true;
+    }
+
+    void MoveTowardsPlayer()
+    {
+        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 
     void CheckPlayerPosition()
     {
+        // Ajusta a orientação do sprite (virado para a direção do jogador)
         if (player.transform.position.x < transform.position.x && isFacingRight)
         {
             FlipSprite();

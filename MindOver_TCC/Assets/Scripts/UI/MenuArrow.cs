@@ -19,6 +19,10 @@ public class MenuArrow : MonoBehaviour
 
     private LevelLoader levelLoader;
 
+    // Audio
+    public AudioSource audioSource;
+    public AudioClip initialEffect, quitEffect, startingEffect;
+
     private void Start()
     {
         levelLoader = FindAnyObjectByType<LevelLoader>();
@@ -36,11 +40,15 @@ public class MenuArrow : MonoBehaviour
 
             if (Input.GetKey(KeyCode.Z) && isPlay == true)
             {
+                // audioSource.clip = initialEffect;
+                PlaySound(initialEffect);
                 levelLoader.LoadNextLevel();
             }
 
             if (Input.GetKey(KeyCode.Z) && isQuit == true)
             {
+                // audioSource.clip = quitEffect;
+                PlaySound(quitEffect);
                 Application.Quit();
             }
         }       
@@ -69,6 +77,8 @@ public class MenuArrow : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Z))
             {
+                audioSource.clip = initialEffect;
+                PlaySound(initialEffect);
                 textAnim.SetBool("apertouZ", true);
                 bgAnim.SetBool("apertouZ", true);
                 isInStart = false;
@@ -89,5 +99,13 @@ public class MenuArrow : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         arrowAnim.SetBool("go", true);
         isPlay = true;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }

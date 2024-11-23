@@ -18,11 +18,15 @@ public class AttackPlayer : MonoBehaviour
 
     public ParticleSystem particle;
 
+    public AudioSource audioSource;
+    public AudioClip[] clips;
+
     // Update is called once per frame
     void Update()
     {
         if (canAttack && Input.GetKeyDown(KeyCode.Z))
         {
+            PlayRandomSound();
             StartCoroutine(Attack());
         }
     }
@@ -61,5 +65,11 @@ public class AttackPlayer : MonoBehaviour
         canAttack = false;
         yield return new WaitForSeconds(1);
         canAttack = true;
+    }
+
+    void PlayRandomSound()
+    {
+        int randomIndex = Random.Range(0, clips.Length);
+        audioSource.PlayOneShot(clips[randomIndex], 1f);
     }
 }
