@@ -340,6 +340,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 673.5574
       objectReference: {fileID: 0}
@@ -349,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.298346
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -357,15 +369,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7248879357347179382, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -833,9 +845,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1371529825}
+  - {fileID: 595917251}
   - {fileID: 1684981491}
   - {fileID: 209310261}
   - {fileID: 358107946}
   - {fileID: 643774025}
-  - {fileID: 595917251}
   - {fileID: 885680872}

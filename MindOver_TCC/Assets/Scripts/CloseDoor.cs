@@ -5,6 +5,7 @@ using UnityEngine;
 public class CloseDoor : MonoBehaviour
 {
     public Animator doorAnim;
+    public BossFogo bossFogo;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -20,5 +21,10 @@ public class CloseDoor : MonoBehaviour
         doorAnim.SetBool("close", true);
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        bossFogo.Attacking();
     }
 }
