@@ -5,6 +5,7 @@ using UnityEngine;
 public class ActivateBossFogo : MonoBehaviour
 {
     private BossFogo bossFogo;
+    public Animator doorAnim;
 
     // Start is called before the first frame update
     void Start()
