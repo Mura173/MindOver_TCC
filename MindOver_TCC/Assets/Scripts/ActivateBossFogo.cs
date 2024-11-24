@@ -23,6 +23,8 @@ public class ActivateBossFogo : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            doorAnim.SetBool("open", false);
+            doorAnim.SetBool("close", true);
             bossFogo.Attack();
             Destroy(gameObject);
         }
