@@ -76,6 +76,8 @@ public class BossFogo : MonoBehaviour
             // Verifica se o jogador está à direita ou à esquerda do BossFogo
             float direction = (player.transform.position.x > transform.position.x) ? 1f : -1f;
 
+            speed = Mathf.Abs(speed) * direction;
+
             // Instancia o foguinho e passa a direcao para a velocidade
             GameObject foguinhoInstanciado = Instantiate(foguinho, instantiatePoint.transform.position, Quaternion.identity);
 
