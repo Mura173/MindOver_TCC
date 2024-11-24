@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4341811233242902175}
   m_Layer: 0
   m_Name: DuasCaixas
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,10 @@ PrefabInstance:
     - target: {fileID: 2682219830551985449, guid: 1135e5c7fe731884d83ab00d1686c468, type: 3}
       propertyPath: m_Name
       value: CaixaSemGravidade
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682219830551985449, guid: 1135e5c7fe731884d83ab00d1686c468, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8710325096408157145, guid: 1135e5c7fe731884d83ab00d1686c468, type: 3}
       propertyPath: m_LocalPosition.x
@@ -106,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 2682219830551985449, guid: 1135e5c7fe731884d83ab00d1686c468, type: 3}
       propertyPath: m_Name
       value: CaixaSemGravidade (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2682219830551985449, guid: 1135e5c7fe731884d83ab00d1686c468, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 8710325096408157145, guid: 1135e5c7fe731884d83ab00d1686c468, type: 3}
       propertyPath: m_LocalPosition.x

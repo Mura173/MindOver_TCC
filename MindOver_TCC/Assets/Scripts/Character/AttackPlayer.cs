@@ -21,6 +21,8 @@ public class AttackPlayer : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip[] clips;
 
+    private float hitstopDuration = 0.1f;
+
     // Update is called once per frame
     void Update()
     {
@@ -52,6 +54,7 @@ public class AttackPlayer : MonoBehaviour
 
             if (inimigo != null)
             {
+                StartCoroutine(Hitstop());
                 Instantiate(particle, pontoAtaque.position, particle.transform.rotation);
                 Vector2 knockbackDirection = (colliderInimigo.transform.position - this.pontoAtaque.position).normalized;
                 inimigo.ReceberDano(knockbackDirection);
@@ -63,8 +66,16 @@ public class AttackPlayer : MonoBehaviour
     {
         Atacar();
         canAttack = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.7f);
         canAttack = true;
+    }
+
+    private IEnumerator Hitstop()
+    {
+        float originalTimeScale = Time.timeScale; // Salva o TimeScale original
+        Time.timeScale = 0f; // Pausa o tempo
+        yield return new WaitForSecondsRealtime(hitstopDuration); // Espera em tempo real
+        Time.timeScale = originalTimeScale; // Restaura o TimeScale
     }
 
     void PlayRandomSound()

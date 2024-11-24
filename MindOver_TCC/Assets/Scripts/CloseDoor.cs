@@ -22,9 +22,4 @@ public class CloseDoor : MonoBehaviour
         yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
-
-    private void OnDestroy()
-    {
-        bossFogo.Attacking();
-    }
 }

@@ -1,12 +1,9 @@
 using System.Collections;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class BossFogo : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private GameObject player;
-    private bool isFacingRight = true;
-
     public GameObject foguinho;
     public Transform instantiatePoint;
     public ParticleSystem smoke;
@@ -14,45 +11,103 @@ public class BossFogo : MonoBehaviour
     private int maxHeight = 10;
     public int height;
     public float scaleFactor;
+    public float speed;
 
     public int damage;
     public CharacterHealth playerHealth;
+    public GameObject placadeAtencao;
+
+    private Rigidbody2D rb;
+    private GameObject player;
+    private bool isFacingRight = true;
+
+    [SerializeField]
+    private bool canMove = false;
+
+    private Animator anim;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
 
         height = maxHeight;
+
+        placadeAtencao.SetActive(false);
     }
 
     void Update()
     {
         CheckPlayerPosition();
 
-        // Inicia o ataque ao pressionar a tecla "L"
-        if (Input.GetKeyDown(KeyCode.L))
+        if (height <= 2)
         {
-            Attacking();
+            Instantiate(smoke, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 
-    public void Attacking()
+    public void Attack()
     {
         StartCoroutine(Spawn());
+    }
+
+    void Move()
+    {
+        if (canMove)
+        {
+            StartCoroutine(ShowAttention());
+            anim.SetBool("walking", true);
+            anim.SetBool("idle", false);
+            rb.velocity = new Vector2(speed, rb.velocity.y);
+            StartCoroutine(Spawn());
+        }
     }
 
     public IEnumerator Spawn()
     {
         yield return new WaitForSeconds(1f);
+        anim.SetBool("idle", true);
+        anim.SetBool("walking", false);
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
-            Instantiate(foguinho, instantiatePoint.transform.position, Quaternion.identity);
+            // Verifica se o jogador está à direita ou à esquerda do BossFogo
+            float direction = (player.transform.position.x > transform.position.x) ? 1f : -1f;
+
+            // Instancia o foguinho e passa a direcao para a velocidade
+            GameObject foguinhoInstanciado = Instantiate(foguinho, instantiatePoint.transform.position, Quaternion.identity);
+
+            MinionFogo foguinhoScript = foguinhoInstanciado.GetComponent<MinionFogo>();
+            if (foguinhoScript != null)
+            {
+                foguinhoScript.speed *= -direction;
+            }
+
             yield return new WaitForSeconds(1f);
             height--;
             DiminuirObjeto();
         }
+
+        yield return new WaitForSeconds(2.5f);
+        canMove = true;
+        Move();
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer == 10)
+        {
+            speed = -speed;
+        }
+    }
+
+    IEnumerator ShowAttention()
+    {
+        placadeAtencao.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        placadeAtencao.SetActive(false);
     }
 
     private void DiminuirObjeto()
@@ -114,8 +169,6 @@ public class BossFogo : MonoBehaviour
     void FlipSprite()
     {
         isFacingRight = !isFacingRight;
-
-
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
