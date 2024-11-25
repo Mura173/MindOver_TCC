@@ -17,11 +17,16 @@ public class CharacterHealth : MonoBehaviour
 
     private Character character;
 
+    private AudioSource audioSource;
+    public AudioClip healClip;
+
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
         character = GetComponent<Character>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -79,6 +84,7 @@ public class CharacterHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coracao"))
         {
+            audioSource.PlayOneShot(healClip);
             health = maxHealth;
             Destroy(other.gameObject);
         }

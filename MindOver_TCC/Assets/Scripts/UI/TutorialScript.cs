@@ -7,6 +7,9 @@ public class TutorialScript : MonoBehaviour
     public Animator anim;
     private LevelLoader levelLoader;
 
+    public AudioSource audioSource;
+    public AudioClip nextSceneClip;
+
     private void Start()
     {
         levelLoader = FindAnyObjectByType<LevelLoader>();
@@ -19,6 +22,7 @@ public class TutorialScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            audioSource.PlayOneShot(nextSceneClip);
             levelLoader.LoadNextLevel();
         }
     }

@@ -39,6 +39,12 @@ public class Character : MonoBehaviour
     public bool hasTakenDamage = false;
     public bool isKnockedBack = false;
 
+    public AudioSource audioSource;
+    public AudioClip footstepClip, jumpingClip;
+
+    public float footstepInterval = 0.2f;
+    private float footstepTimer = 0.0f;
+
     void Start()
     {
         vivotia = GetComponent<Rigidbody2D>();
@@ -64,6 +70,7 @@ public class Character : MonoBehaviour
         if (!isKnockedBack)
         {
             Move();
+            
         }
 
         if (hasTakenDamage)
@@ -80,6 +87,23 @@ public class Character : MonoBehaviour
         if (isGrounded)
         {
             vivotia.velocity = new Vector2(horizontalInput * speed, vivotia.velocity.y);
+
+            // Reproduz som de passos
+            if (Mathf.Abs(horizontalInput) > 0.1f) // Certifica-se de que o personagem está se movendo
+            {
+                footstepTimer -= Time.deltaTime;
+
+                if (footstepTimer <= 0)
+                {
+                    PlaySound(footstepClip);
+                    footstepTimer = footstepInterval; // Reinicia o intervalo do som de passos
+                }
+            }
+            else
+            {
+                // Reseta o timer quando não está andando
+                footstepTimer = 0;
+            }
         }
         else
         {
@@ -94,6 +118,7 @@ public class Character : MonoBehaviour
             isJumping = true;
             jumpTimeCounter = jumpTime;
             vivotia.velocity = new Vector2(vivotia.velocity.x, jumpPower);
+            PlaySound(jumpingClip);
         }
 
         if (Input.GetButton("Jump") && isJumping == true)
@@ -195,6 +220,16 @@ public class Character : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             canJump = false;
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 }

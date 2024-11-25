@@ -6,11 +6,13 @@ public class ActivateBossFogo : MonoBehaviour
 {
     private BossFogo bossFogo;
     public Animator doorAnim;
+    private Transform posStart;
 
     // Start is called before the first frame update
     void Start()
     {
         bossFogo = FindAnyObjectByType<BossFogo>();
+        posStart = GameObject.Find("posStart").transform;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class ActivateBossFogo : MonoBehaviour
             doorAnim.SetBool("close", true);
             bossFogo.Attack();
             Destroy(gameObject);
+            posStart.transform.position = new Vector2(120f, 6.90f);
         }
     }
 }

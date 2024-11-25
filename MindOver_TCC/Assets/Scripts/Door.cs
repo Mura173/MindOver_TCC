@@ -17,19 +17,23 @@ public class Door : MonoBehaviour
 
     public SceneManagement sceneManagement;
 
+    private AudioSource audioSource;
+    public AudioClip nextLevelClip;
     void Awake()
     {
         letterE = GameObject.Find("letterE");
         door = GameObject.FindGameObjectWithTag("Door");
+
+        audioSource = GetComponent<AudioSource>();
 
         letterE.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.E) && estanaPorta == true)
+        if (Input.GetKeyDown(KeyCode.E) && estanaPorta == true)
         {
-            SceneManager.LoadScene(sceneManagement.sceneIndex + 1);
+            StartCoroutine(NextLevel());
         }
 
         if (estanaPorta == false)
@@ -41,6 +45,13 @@ public class Door : MonoBehaviour
         {
             doorSprite.sprite = spriteOpened;
         }
+    }
+
+    IEnumerator NextLevel()
+    {
+        audioSource.PlayOneShot(nextLevelClip);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(sceneManagement.sceneIndex + 1);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

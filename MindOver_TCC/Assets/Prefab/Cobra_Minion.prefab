@@ -205,6 +205,8 @@ MonoBehaviour:
   knockbackForce: 5
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageDuration: 0.5
+  tookDamageClip: {fileID: 8300000, guid: 3f2860cb4674e9c4c803e850f7785bf9, type: 3}
+  lastDamageSound: {fileID: 0}
 --- !u!114 &1318962270082192638
 MonoBehaviour:
   m_ObjectHideFlags: 0

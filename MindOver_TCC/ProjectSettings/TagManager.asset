@@ -19,6 +19,7 @@ TagManager:
   - ChefeFogo
   - CollidersFogo
   - CollidersFoguinho
+  - Chefe
   layers:
   - Default
   - TransparentFX

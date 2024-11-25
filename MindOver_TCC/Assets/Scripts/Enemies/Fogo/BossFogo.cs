@@ -26,11 +26,13 @@ public class BossFogo : MonoBehaviour
 
     private Animator anim;
 
+    private Door doorScript;
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
+        doorScript = FindAnyObjectByType<Door>();
 
         height = maxHeight;
 
@@ -174,5 +176,10 @@ public class BossFogo : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
+    }
+
+    private void OnDestroy()
+    {
+        doorScript.portaAberta = true;
     }
 }

@@ -12,6 +12,9 @@ public class ArrowQuad : MonoBehaviour
 
     private LevelLoader levelLoader;
 
+    public AudioSource audioSource;
+    public AudioClip sugadaClip;
+
     private void Start()
     {
         levelLoader = FindAnyObjectByType<LevelLoader>();
@@ -30,8 +33,9 @@ public class ArrowQuad : MonoBehaviour
 
     void Sugada()
     {
-        if (Input.GetKey(KeyCode.Z) && podeSugar == true)
+        if (Input.GetKeyDown(KeyCode.Z) && podeSugar == true)
         {
+            audioSource.PlayOneShot(sugadaClip);
             z.SetActive(false);
             sugada.SetActive(true);
             StartCoroutine(NextScene());

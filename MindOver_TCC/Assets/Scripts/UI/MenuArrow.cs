@@ -38,14 +38,14 @@ public class MenuArrow : MonoBehaviour
         {
             MoveArrow();
 
-            if (Input.GetKey(KeyCode.Z) && isPlay == true)
+            if (Input.GetKeyDown(KeyCode.Z) && isPlay == true)
             {
                 // audioSource.clip = initialEffect;
                 PlaySound(initialEffect);
                 levelLoader.LoadNextLevel();
             }
 
-            if (Input.GetKey(KeyCode.Z) && isQuit == true)
+            if (Input.GetKeyDown(KeyCode.Z) && isQuit == true)
             {
                 // audioSource.clip = quitEffect;
                 PlaySound(quitEffect);
@@ -56,14 +56,14 @@ public class MenuArrow : MonoBehaviour
 
     void MoveArrow()
     {
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             arrow.rectTransform.anchoredPosition = new Vector2(yAnchDown, xAnchDown);
             isPlay = false;
             isQuit = true;
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             arrow.rectTransform.anchoredPosition = new Vector2(yAnchUp, xAnchUp);
             isPlay = true;
@@ -105,7 +105,9 @@ public class MenuArrow : MonoBehaviour
     {
         if (clip != null)
         {
-            audioSource.PlayOneShot(clip);
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 }

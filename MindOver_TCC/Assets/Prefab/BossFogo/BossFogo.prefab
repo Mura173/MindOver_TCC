@@ -190,8 +190,8 @@ MonoBehaviour:
   smoke: {fileID: 8758233526394910837, guid: a62dad6d1e7e4414f8133d599b91fbf3, type: 3}
   height: 0
   scaleFactor: 0.1
-  speed: -15
-  damage: 0
+  speed: -12
+  damage: 1
   playerHealth: {fileID: 0}
   placadeAtencao: {fileID: 0}
   canMove: 0

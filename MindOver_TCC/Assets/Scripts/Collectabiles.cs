@@ -7,6 +7,9 @@ public class Collectabiles : MonoBehaviour
     public CollectableManager cm;
     private bool isCollected = false;
 
+    public AudioSource audioSource;
+    public AudioClip collectClip;
+
     private void Start()
     {
         cm = FindAnyObjectByType<CollectableManager>();
@@ -17,6 +20,7 @@ public class Collectabiles : MonoBehaviour
         if (!isCollected && outro.gameObject.CompareTag("Player"))
         {
             isCollected = true;
+            audioSource.PlayOneShot(collectClip);
             cm.colCount--;
             Destroy(this.gameObject);
         }

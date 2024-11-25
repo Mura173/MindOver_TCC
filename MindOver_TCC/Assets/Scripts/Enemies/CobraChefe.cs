@@ -14,6 +14,9 @@ public class CobraChefe : MonoBehaviour
 
     public Door doorScript;
 
+    public AudioSource audioSource;
+    public AudioClip shootingClip, tookDamage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +48,7 @@ public class CobraChefe : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullets, bulletPos.position, Quaternion.Euler(0f, 0f, 90f));
+        PlaySound(shootingClip);
     }
 
     void CheckPlayerPosition()
@@ -72,5 +76,15 @@ public class CobraChefe : MonoBehaviour
     private void OnDestroy()
     {
         doorScript.portaAberta = true;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
     }
 }

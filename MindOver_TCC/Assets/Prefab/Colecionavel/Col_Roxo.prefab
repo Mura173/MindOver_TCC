@@ -166,3 +166,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cm: {fileID: 0}
+  audioSource: {fileID: 0}
+  collectClip: {fileID: 8300000, guid: fddf07ce0d0c2fa49878dd904a6e9cbb, type: 3}

@@ -1597,9 +1597,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: ca9057596ebf3b94a8f580c1d64cb2bc, type: 3}
     m_FontSize: 14
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
@@ -2441,7 +2441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8254574043996164163, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31988,6 +31988,9 @@ MonoBehaviour:
   knockbackForce: 5
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageDuration: 0.5
+  audioSource: {fileID: 0}
+  tookDamageClip: {fileID: 0}
+  lastDamageSound: {fileID: 0}
 --- !u!50 &2017653675
 Rigidbody2D:
   serializedVersion: 4
