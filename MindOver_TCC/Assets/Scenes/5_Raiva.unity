@@ -341,6 +341,10 @@ PrefabInstance:
       propertyPath: life
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6388269767441203196, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
+      propertyPath: tookDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0edbaad61a1f3f549bcd367b00660b7e, type: 3}
     - target: {fileID: 8888427442284234558, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
       propertyPath: m_Name
       value: FoguinhoAndando (4)
@@ -1783,6 +1787,63 @@ PrefabInstance:
       addedObject: {fileID: 1024235223}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c20cc011aef3ac42bd06cf772ce9840, type: 3}
+--- !u!1001 &600464570
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1885375988460751433, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_Name
+      value: AudioManagerCollectabiles
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 193
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
 --- !u!1 &603046028 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8888427442284234558, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
@@ -3580,6 +3641,10 @@ PrefabInstance:
       propertyPath: life
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6388269767441203196, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
+      propertyPath: tookDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0edbaad61a1f3f549bcd367b00660b7e, type: 3}
     - target: {fileID: 8888427442284234558, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
       propertyPath: m_Name
       value: FoguinhoAndando (3)
@@ -4015,6 +4080,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1207987415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1565920968223496046, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1885375988460751433, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_Name
+      value: AudioManagerEnemyDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 193
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178448145773043073, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
 --- !u!1001 &1214250413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27362,6 +27488,10 @@ PrefabInstance:
       propertyPath: life
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6388269767441203196, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
+      propertyPath: tookDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0edbaad61a1f3f549bcd367b00660b7e, type: 3}
     - target: {fileID: 8888427442284234558, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
       propertyPath: m_Name
       value: FoguinhoAndando (5)
@@ -27773,6 +27903,10 @@ PrefabInstance:
       propertyPath: life
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6388269767441203196, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
+      propertyPath: tookDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0edbaad61a1f3f549bcd367b00660b7e, type: 3}
     - target: {fileID: 8888427442284234558, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
       propertyPath: m_Name
       value: FoguinhoAndando (2)
@@ -28303,6 +28437,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6388269767441203196, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
+      propertyPath: tookDamageClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0edbaad61a1f3f549bcd367b00660b7e, type: 3}
     - target: {fileID: 8888427442284234558, guid: 78132c17ede480b449ccd2bc2ba87d1d, type: 3}
       propertyPath: m_Name
       value: FoguinhoAndando
@@ -28331,6 +28469,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 828997008}
   - {fileID: 1666574450}
+  - {fileID: 600464570}
+  - {fileID: 1207987415}
   - {fileID: 1163080668}
   - {fileID: 1462541149}
   - {fileID: 1672941090}

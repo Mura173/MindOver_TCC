@@ -183,6 +183,8 @@ MonoBehaviour:
   knockbackForce: 5
   damageColor: {r: 1, g: 0, b: 0, a: 1}
   damageDuration: 0.5
+  tookDamageClip: {fileID: 8300000, guid: 0edbaad61a1f3f549bcd367b00660b7e, type: 3}
+  lastDamageSound: {fileID: 0}
 --- !u!70 &1976922204021026672
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
