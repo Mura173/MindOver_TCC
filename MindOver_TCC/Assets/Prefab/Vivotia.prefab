@@ -206,6 +206,7 @@ MonoBehaviour:
   isKnockedBack: 0
   audioSource: {fileID: 8191775342839622458}
   footstepClip: {fileID: 8300000, guid: 67b194e2c6f161545a523b7b792a71de, type: 3}
+  jumpingClip: {fileID: 8300000, guid: a8ace3fa9b1a31d4c8e0af9797a5f8be, type: 3}
   footstepInterval: 0.3
 --- !u!114 &4425234018094526839
 MonoBehaviour:
@@ -252,6 +253,7 @@ MonoBehaviour:
   - {fileID: 0}
   fullHeart: {fileID: 21300000, guid: 9fa2b15262d8bd3439e80f3ce95bea6c, type: 3}
   emptyHeart: {fileID: 21300000, guid: d5288a47c5ac8204eb2fe3b26e646cf5, type: 3}
+  healClip: {fileID: 0}
 --- !u!114 &7569630258956387631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,6 +271,7 @@ MonoBehaviour:
   spriteClosed: {fileID: 1418779309, guid: 77e1056feef1b8649a490d7fac2439fd, type: 3}
   spriteOpened: {fileID: 1217172565, guid: 77e1056feef1b8649a490d7fac2439fd, type: 3}
   sceneManagement: {fileID: 0}
+  nextLevelClip: {fileID: 8300000, guid: bbda5f60b75b3b848957dd380d7b4a2c, type: 3}
 --- !u!61 &837278392629792981
 BoxCollider2D:
   m_ObjectHideFlags: 0

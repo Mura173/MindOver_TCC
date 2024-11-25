@@ -36441,10 +36441,6 @@ PrefabInstance:
       propertyPath: hearts.Array.data[3]
       value: 
       objectReference: {fileID: 1067973394}
-    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: jumpingClip
-      value: 
-      objectReference: {fileID: 8300000, guid: a8ace3fa9b1a31d4c8e0af9797a5f8be, type: 3}
     - target: {fileID: 5603077485772311956, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.69
@@ -36489,10 +36485,6 @@ PrefabInstance:
       propertyPath: doorSprite
       value: 
       objectReference: {fileID: 205923403}
-    - target: {fileID: 7569630258956387631, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: nextLevelClip
-      value: 
-      objectReference: {fileID: 8300000, guid: bbda5f60b75b3b848957dd380d7b4a2c, type: 3}
     - target: {fileID: 7569630258956387631, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: sceneManagement
       value: 

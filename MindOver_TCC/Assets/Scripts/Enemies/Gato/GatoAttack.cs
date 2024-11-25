@@ -29,12 +29,15 @@ public class GatoAttack : MonoBehaviour
 
     public Door doorScript;
 
+    public AudioSource audioSource;
+    public AudioClip swordClip, swordSlashClip, swordSlashClip1;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         placaDeAtencao = GameObject.Find("Atencao");
-        
+
         placaDeAtencao.SetActive(false);
     }
 
@@ -94,18 +97,21 @@ public class GatoAttack : MonoBehaviour
         anim.SetBool("atkcurto", false);
         anim.SetBool("attackingCurto", true);  
         AtkCurto();
+        PlaySound(swordClip);
         placaDeAtencao.SetActive(false);
         yield return new WaitForSeconds(1f);
         anim.SetBool("attackingCurto", false);
-        yield return new WaitForSeconds(2f); // Tempo de recarga do ataque
+        yield return new WaitForSeconds(1f); // Tempo de recarga do ataque
         anim.SetBool("atkLongo", true);
         yield return new WaitForSeconds(1f);
         AtkLongo();
+        PlaySound(swordSlashClip);
         placaDeAtencao.SetActive(true);
         yield return new WaitForSeconds(1f);
         anim.SetBool("atkLongo", false);
         anim.SetBool("attackingCurto", true);
         AtkCurto();
+        PlaySound(swordSlashClip1);
         placaDeAtencao.SetActive(false);
         yield return new WaitForSeconds(1f);
         anim.SetBool("attackingCurto", false);
@@ -167,5 +173,15 @@ public class GatoAttack : MonoBehaviour
         doorAnim.SetBool("open", true);
         placaDeAtencao.SetActive(false);
         doorScript.portaAberta = true;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
     }
 }

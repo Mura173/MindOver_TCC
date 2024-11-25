@@ -84,9 +84,19 @@ public class CharacterHealth : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Coracao"))
         {
-            audioSource.PlayOneShot(healClip);
             health = maxHealth;
+            PlaySound(healClip);
             Destroy(other.gameObject);
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 }

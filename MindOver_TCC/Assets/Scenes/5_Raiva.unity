@@ -2416,6 +2416,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1908413585}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 82488611}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: collectClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0c21d4ac820f80439a06fd1c4a6cdbb, type: 3}
     - target: {fileID: 8998002962825251624, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
       propertyPath: m_Name
       value: Col_Preto (1)
@@ -3317,6 +3329,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1908413585}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 82488611}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: collectClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0c21d4ac820f80439a06fd1c4a6cdbb, type: 3}
     - target: {fileID: 8998002962825251624, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
       propertyPath: m_Name
       value: Col_Preto (2)
@@ -3626,6 +3650,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1908413585}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 82488611}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: collectClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0c21d4ac820f80439a06fd1c4a6cdbb, type: 3}
     - target: {fileID: 8998002962825251624, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
       propertyPath: m_Name
       value: Col_Preto (3)
@@ -3881,6 +3917,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1908413585}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 82488611}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: collectClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0c21d4ac820f80439a06fd1c4a6cdbb, type: 3}
     - target: {fileID: 8998002962825251624, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
       propertyPath: m_Name
       value: Col_Preto (4)
@@ -5760,6 +5808,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: cm
+      value: 
+      objectReference: {fileID: 1908413585}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 82488611}
+    - target: {fileID: 7693440033221292199, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
+      propertyPath: collectClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c0c21d4ac820f80439a06fd1c4a6cdbb, type: 3}
     - target: {fileID: 8998002962825251624, guid: 20760f02ef28a904e97430810c0a354b, type: 3}
       propertyPath: m_Name
       value: Col_Preto
@@ -5880,7 +5940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8254574043996164163, guid: 222b1c95683521f488a4aac3ee9c88d9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27535,6 +27595,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8fa5e813a62e94688fc4be7d064c11, type: 3}
+--- !u!114 &1908413585 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4596865589592002727, guid: 3cf0419271ad8364da46873bc10d1761, type: 3}
+  m_PrefabInstance: {fileID: 282823689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1437ad3287397bc4cad3be02518f082f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1965341148
 GameObject:
   m_ObjectHideFlags: 0
