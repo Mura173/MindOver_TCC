@@ -8,6 +8,11 @@ public class CollectableManager : MonoBehaviour
     public int colCount;
     public Text coinText;
 
+    private GameObject audioSourceObject;
+    private AudioSource audioSource;
+
+    public AudioClip openClip;
+
     [System.Serializable]
     public class DoorRequirement
     {
@@ -21,6 +26,8 @@ public class CollectableManager : MonoBehaviour
 
     void Start()
     {
+        audioSourceObject = GameObject.Find("AudioManager");
+        audioSource = audioSourceObject.GetComponent<AudioSource>();
         coinText.text = colCount.ToString();
     }
 
@@ -32,6 +39,7 @@ public class CollectableManager : MonoBehaviour
         {
             if (!door.isOpen && colCount <= door.collectableRequirement)
             {
+                audioSource.PlayOneShot(openClip);
                 door.doorAnim.SetBool("open", true);
                 door.isOpen = true;
             }

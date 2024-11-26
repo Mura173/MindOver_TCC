@@ -37081,6 +37081,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4596865589592002727, guid: 3cf0419271ad8364da46873bc10d1761, type: 3}
+      propertyPath: openClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a15c759dc794cf42a72b93562369092, type: 3}
+    - target: {fileID: 4596865589592002727, guid: 3cf0419271ad8364da46873bc10d1761, type: 3}
       propertyPath: sceneManagement
       value: 
       objectReference: {fileID: 1332697100}

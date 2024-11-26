@@ -17,12 +17,15 @@ public class CharacterHealth : MonoBehaviour
 
     private Character character;
 
+    private GameObject audioSourceObject;
     private AudioSource audioSource;
     public AudioClip healClip;
 
     // Start is called before the first frame update
     void Start()
     {
+        audioSourceObject = GameObject.Find("AudioManagerCollectabiles");
+        audioSource = audioSourceObject.GetComponent<AudioSource>();
         health = maxHealth;
         character = GetComponent<Character>();
 
