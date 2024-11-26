@@ -27,12 +27,25 @@ public class BossFogo : MonoBehaviour
     private Animator anim;
 
     private Door doorScript;
+
+    private AudioSource audioSource;
+
+    public AudioSource audioSourceEnemyDamage;
+
+    public AudioClip instantiateClip, runClip, deathClip;
+
+    private MusicLooper musicLooper;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         doorScript = FindAnyObjectByType<Door>();
+
+        musicLooper = FindAnyObjectByType<MusicLooper>();
+
+        audioSource = GetComponent<AudioSource>();
 
         height = maxHeight;
 
@@ -63,6 +76,7 @@ public class BossFogo : MonoBehaviour
             anim.SetBool("walking", true);
             anim.SetBool("idle", false);
             rb.velocity = new Vector2(speed, rb.velocity.y);
+            PlaySound(runClip);
             StartCoroutine(Spawn());
         }
     }
@@ -75,6 +89,8 @@ public class BossFogo : MonoBehaviour
 
         for (int i = 0; i < 2; i++)
         {
+            PlaySound(instantiateClip);
+
             // Verifica se o jogador está à direita ou à esquerda do BossFogo
             float direction = (player.transform.position.x > transform.position.x) ? 1f : -1f;
 
@@ -180,6 +196,18 @@ public class BossFogo : MonoBehaviour
 
     private void OnDestroy()
     {
+        audioSourceEnemyDamage.PlayOneShot(deathClip);
+        musicLooper.audioSource.Stop();
         doorScript.portaAberta = true;
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            audioSource.Stop();
+            audioSource.clip = clip;
+            audioSource.Play();
+        }
     }
 }
