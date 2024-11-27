@@ -28,8 +28,6 @@ public class CharacterHealth : MonoBehaviour
         audioSource = audioSourceObject.GetComponent<AudioSource>();
         health = maxHealth;
         character = GetComponent<Character>();
-
-        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()

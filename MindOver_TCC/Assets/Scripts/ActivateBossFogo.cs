@@ -8,11 +8,17 @@ public class ActivateBossFogo : MonoBehaviour
     public Animator doorAnim;
     private Transform posStart;
 
+    public AudioClip battleClip;
+
+    private MusicLooper musicLooper;
+
     // Start is called before the first frame update
     void Start()
     {
         bossFogo = FindAnyObjectByType<BossFogo>();
         posStart = GameObject.Find("posStart").transform;
+
+        musicLooper = FindAnyObjectByType<MusicLooper>();
     }
 
     // Update is called once per frame

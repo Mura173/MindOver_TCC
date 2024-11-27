@@ -7,17 +7,23 @@ public class Pause : MonoBehaviour
     public PostProcessVolume ppVolume;
     private bool isPaused;
 
+    private AudioSource audioSource;
+    public AudioClip pauseClip;
+
     private void Start()
     {
         pause = GameObject.Find("Pause");
         ppVolume.enabled = false;
         pause.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            audioSource.PlayOneShot(pauseClip);
+
             if (!isPaused)
             {
                 pause.SetActive(true);
