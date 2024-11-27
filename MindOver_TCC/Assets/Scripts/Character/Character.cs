@@ -119,6 +119,12 @@ public class Character : MonoBehaviour
             jumpTimeCounter = jumpTime;
             vivotia.velocity = new Vector2(vivotia.velocity.x, jumpPower);
             PlaySound(jumpingClip);
+
+            // Mantém a animação de ataque, se estiver atacando
+            if (!isAttacking)
+            {
+                anim.SetBool("isJumping", true);
+            }
         }
 
         if (Input.GetButton("Jump") && isJumping == true)
@@ -130,7 +136,12 @@ public class Character : MonoBehaviour
                 vivotia.velocity = new Vector2(vivotia.velocity.x, jumpPower);
                 jumpTimeCounter -= Time.deltaTime;
                 isGrounded = false;
-                anim.SetBool("isJumping", !isGrounded);
+
+                // Só atualiza a animação de pulo se não estiver atacando
+                if (!isAttacking)
+                {
+                    anim.SetBool("isJumping", true);
+                }
             }
             else
             {
@@ -185,6 +196,8 @@ public class Character : MonoBehaviour
         {
             isAttacking = true;
             anim.SetBool("isAttacking", true);
+
+            // Não desativa a animação de pulo, mas a prioriza visualmente
             anim.SetBool("isJumping", false);
             attackTimer = attackDuration;
         }
@@ -196,6 +209,11 @@ public class Character : MonoBehaviour
             {
                 isAttacking = false;
                 anim.SetBool("isAttacking", false);
+                // Reativa a animação de pulo se estiver no ar
+                if (!isGrounded && isJumping)
+                {
+                    anim.SetBool("isJumping", true);
+                }
             }
         }
     }
