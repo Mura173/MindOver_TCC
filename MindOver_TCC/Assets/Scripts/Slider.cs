@@ -6,6 +6,7 @@ public class Slider : MonoBehaviour
 {
     public SliderJoint2D slider;
     public JointMotor2D aux;
+    internal float value;
 
     void Start()
     {

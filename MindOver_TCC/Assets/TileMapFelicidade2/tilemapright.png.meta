@@ -108,7 +108,574 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tilemapright_0
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1680
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c935eb96203c6b42865298c03e72e92
+      internalID: 1890618892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_1
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1680
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36cd4512867d90341b395d50c0b5733f
+      internalID: 1185826278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_2
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1680
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28e4e5263c1a6543bf3866d976e60d2
+      internalID: -882784505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_3
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1680
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5abbe51a6d15a4e9f8c414f182fedc
+      internalID: -1583972670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_4
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1680
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2495390a06e569a43af857d61e89ebdd
+      internalID: 1800316540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_5
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1360
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffbc847f7af6f24898960cb2b30edaa
+      internalID: 1262673896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1360
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edadf55c7900e642958d52e281c4e26
+      internalID: 1242568951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_7
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1360
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d5176e469c6e054a85d1a4d4b07319f
+      internalID: 1123658869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_8
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1360
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6139a2284823ea4493af19cd7ec7348
+      internalID: -535158408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_9
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1360
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f49770cb2f99c40b6947945eefa83e
+      internalID: 294609651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_10
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1360
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e26da09c0ff74489e889fd59500893
+      internalID: 82465047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_11
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1040
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a11ef97badf3b4ebdaad4d5e0ba5ce
+      internalID: 1948397557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1040
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93fddfc2a143c340b5a11acf1526940
+      internalID: -563727983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_13
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 1040
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e83f8c520ba1a46939c1976cb6bc19
+      internalID: -1495061627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_14
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1040
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f06f6414bfd3c408ef1920876a3682
+      internalID: -991849388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_15
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 1040
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e1a45940d41c04c8379f9ae1eda0ed
+      internalID: 1139924949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_16
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 1040
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ab2cae9eebfe644a7dec47fa06d884
+      internalID: 1524668577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_17
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 720
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b79fadd835d0b438c07446046257fc
+      internalID: 1333687163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_18
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 720
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4fcf1ae5b528e04a8e46449a318e092
+      internalID: -567485214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_19
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 720
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deac83dc7b99f2742bf0321faa078552
+      internalID: -1856188370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_20
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 720
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173543541c67d144aaae90ac0035eafc
+      internalID: -473073362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_21
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 720
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ac819e651beca4f8451a1c6ef824f4
+      internalID: -564965475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_22
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 720
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18dc8b3539b27be4ea03a90edc0821c6
+      internalID: 1146916677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_23
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 400
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5b9ba2d7d90cd4eb2d3c4771c9f200
+      internalID: -1764069296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_24
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558a714db1d75f04eae21022a506bc2d
+      internalID: -397716826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_25
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 80
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67740198be6c834b90224bc9a6ac212
+      internalID: 537349514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilemapright_26
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 80
+        width: 320
+        height: 320
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61344bd9b3d7ed44bd623cc7b091420
+      internalID: 2021745176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +686,34 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tilemapright_0: 1890618892
+      tilemapright_1: 1185826278
+      tilemapright_10: 82465047
+      tilemapright_11: 1948397557
+      tilemapright_12: -563727983
+      tilemapright_13: -1495061627
+      tilemapright_14: -991849388
+      tilemapright_15: 1139924949
+      tilemapright_16: 1524668577
+      tilemapright_17: 1333687163
+      tilemapright_18: -567485214
+      tilemapright_19: -1856188370
+      tilemapright_2: -882784505
+      tilemapright_20: -473073362
+      tilemapright_21: -564965475
+      tilemapright_22: 1146916677
+      tilemapright_23: -1764069296
+      tilemapright_24: -397716826
+      tilemapright_25: 537349514
+      tilemapright_26: 2021745176
+      tilemapright_3: -1583972670
+      tilemapright_4: 1800316540
+      tilemapright_5: 1262673896
+      tilemapright_6: 1242568951
+      tilemapright_7: 1123658869
+      tilemapright_8: -535158408
+      tilemapright_9: 294609651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
