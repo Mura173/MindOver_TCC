@@ -15,6 +15,8 @@ public class Door : MonoBehaviour
     public Sprite spriteClosed;
     public Sprite spriteOpened;
 
+    private LevelLoader levelLoader;
+
     public SceneManagement sceneManagement;
 
     private AudioSource audioSource;
@@ -23,6 +25,8 @@ public class Door : MonoBehaviour
     {
         letterE = GameObject.Find("letterE");
         door = GameObject.FindGameObjectWithTag("Door");
+
+        levelLoader = FindAnyObjectByType<LevelLoader>();
 
         audioSource = GetComponent<AudioSource>();
 
@@ -51,7 +55,7 @@ public class Door : MonoBehaviour
     {
         audioSource.PlayOneShot(nextLevelClip);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(sceneManagement.sceneIndex + 1);
+        levelLoader.LoadNextLevel();
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -1738,6 +1738,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8758233526394910837, guid: a62dad6d1e7e4414f8133d599b91fbf3, type: 3}
     - target: {fileID: 7687877220730408400, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
+      propertyPath: colChefe
+      value: 
+      objectReference: {fileID: 5639309165786166257, guid: ea948415adfd81643971f08d0aa2728c, type: 3}
+    - target: {fileID: 7687877220730408400, guid: 8d6e4dc78a7023b4f9bd5f36b7823992, type: 3}
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 1688672545}
@@ -36784,14 +36788,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 837278392629792981, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: m_Size.x
-      value: 0.4625535
-      objectReference: {fileID: 0}
-    - target: {fileID: 837278392629792981, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.1544807
-      objectReference: {fileID: 0}
     - target: {fileID: 1583847297376547191, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_Name
       value: Vivotia
@@ -36816,6 +36812,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[3]
       value: 
       objectReference: {fileID: 1067973394}
+    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
+      propertyPath: audioSourceCollectabiles
+      value: 
+      objectReference: {fileID: 1596827329}
     - target: {fileID: 5603077485772311956, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.69

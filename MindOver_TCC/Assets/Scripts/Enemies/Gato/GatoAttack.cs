@@ -27,8 +27,6 @@ public class GatoAttack : MonoBehaviour
     private GameObject placaDeAtencao;
     public Animator doorAnim;
 
-    public Door doorScript;
-
     public AudioSource audioSource;
     public AudioClip swordClip, swordSlashClip, swordSlashClip1;
 
@@ -172,7 +170,6 @@ public class GatoAttack : MonoBehaviour
         doorAnim.SetBool("close", false);
         doorAnim.SetBool("open", true);
         placaDeAtencao.SetActive(false);
-        doorScript.portaAberta = true;
     }
 
     private void PlaySound(AudioClip clip)

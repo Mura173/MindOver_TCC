@@ -36,6 +36,8 @@ public class BossFogo : MonoBehaviour
 
     private MusicLooper musicLooper;
 
+    public GameObject raivaCol;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -59,6 +61,7 @@ public class BossFogo : MonoBehaviour
         if (height <= 2)
         {
             Instantiate(smoke, transform.position, Quaternion.identity);
+            Instantiate(raivaCol, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -198,7 +201,6 @@ public class BossFogo : MonoBehaviour
     {
         audioSourceEnemyDamage.PlayOneShot(deathClip);
         musicLooper.audioSource.Stop();
-        doorScript.portaAberta = true;
     }
 
     private void PlaySound(AudioClip clip)

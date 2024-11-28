@@ -12,8 +12,6 @@ public class CobraChefe : MonoBehaviour
 
     private bool isFacingRight;
 
-    public Door doorScript;
-
     public AudioSource audioSource;
     public AudioClip shootingClip, tookDamage;
 
@@ -71,11 +69,6 @@ public class CobraChefe : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
-    }
-
-    private void OnDestroy()
-    {
-        doorScript.portaAberta = true;
     }
 
     private void PlaySound(AudioClip clip)

@@ -40,16 +40,21 @@ public class Character : MonoBehaviour
     public bool isKnockedBack = false;
 
     public AudioSource audioSource;
+    public AudioSource audioSourceCollectabiles;
+    public AudioClip colClip;
     public AudioClip footstepClip, jumpingClip;
 
     public float footstepInterval = 0.2f;
     private float footstepTimer = 0.0f;
+
+    private Door doorScript;
 
     void Start()
     {
         vivotia = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         posStart = GameObject.Find("posStart").transform;
+        doorScript = GetComponent<Door>();
 
         vivotia.transform.position = posStart.position;
     }
@@ -230,6 +235,13 @@ public class Character : MonoBehaviour
             canJump = true;
             isGrounded = true;
             anim.SetBool("isJumping", !isGrounded);
+        }
+
+        if (other.gameObject.CompareTag("BossCol"))
+        {
+            Destroy(other.gameObject);
+            audioSourceCollectabiles.PlayOneShot(colClip);
+            doorScript.portaAberta = true;
         }
     }
 

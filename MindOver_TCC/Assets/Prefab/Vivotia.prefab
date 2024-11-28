@@ -205,6 +205,8 @@ MonoBehaviour:
   hasTakenDamage: 0
   isKnockedBack: 0
   audioSource: {fileID: 8191775342839622458}
+  audioSourceCollectabiles: {fileID: 0}
+  colClip: {fileID: 8300000, guid: c0c21d4ac820f80439a06fd1c4a6cdbb, type: 3}
   footstepClip: {fileID: 8300000, guid: 67b194e2c6f161545a523b7b792a71de, type: 3}
   jumpingClip: {fileID: 8300000, guid: a8ace3fa9b1a31d4c8e0af9797a5f8be, type: 3}
   footstepInterval: 0.3
@@ -304,7 +306,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.14645344, y: -0.5927874}
+  m_Offset: {x: -0.1544807, y: -0.5927874}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -315,7 +317,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6970931, y: 0.18442512}
+  m_Size: {x: 0.4625535, y: 0.18442512}
   m_EdgeRadius: 0
 --- !u!82 &8191775342839622458
 AudioSource:

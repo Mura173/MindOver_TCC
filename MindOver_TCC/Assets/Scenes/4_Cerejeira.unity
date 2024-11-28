@@ -2031,17 +2031,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parallaxSpeed: 0.05
---- !u!114 &955833163 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7569630258956387631, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
-  m_PrefabInstance: {fileID: 1661383010}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37b8b49cd2d52354587bd6f60c9f32a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &975544844
 GameObject:
   m_ObjectHideFlags: 0
@@ -31481,6 +31470,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[3]
       value: 
       objectReference: {fileID: 1140532375}
+    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
+      propertyPath: audioSourceCollectabiles
+      value: 
+      objectReference: {fileID: 461241312}
     - target: {fileID: 5603077485772311956, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.11
@@ -32554,6 +32547,7 @@ MonoBehaviour:
   damageDuration: 0.5
   tookDamageClip: {fileID: 8300000, guid: c4d07b126b1595641ae2c43856576883, type: 3}
   lastDamageSound: {fileID: 8300000, guid: e7d8753973f63b9408ebb0ac48ba86af, type: 3}
+  colChefe: {fileID: 3889851489939782549, guid: 47de81680150c6b489b041917236f233, type: 3}
 --- !u!50 &2017653675
 Rigidbody2D:
   serializedVersion: 4
@@ -32602,7 +32596,6 @@ MonoBehaviour:
   damage: 1
   playerHealth: {fileID: 655323965}
   doorAnim: {fileID: 1185862352}
-  doorScript: {fileID: 955833163}
   audioSource: {fileID: 2086660633}
   swordClip: {fileID: 8300000, guid: 106dfeedf9c84234ea24177e7e0befba, type: 3}
   swordSlashClip: {fileID: 8300000, guid: 582184753640ca44183f57bd9586c748, type: 3}

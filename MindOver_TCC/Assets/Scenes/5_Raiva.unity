@@ -249,6 +249,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 199edaa7a3cb5c34696b9ce176bba804, type: 3}
+--- !u!82 &31210498 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1565920968223496046, guid: dd494ca56afc08141b61ac2f18be00f6, type: 3}
+  m_PrefabInstance: {fileID: 600464570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &40943790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5229,6 +5234,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: efd40483504188d4ab5e24a1c740b9da, type: 3}
     - target: {fileID: 4832136287375232545, guid: 8688c12c296ecae47bfcbc6dad977295, type: 3}
+      propertyPath: raivaCol
+      value: 
+      objectReference: {fileID: 4188509592242229800, guid: de877e1e922508c469269a94e2e76187, type: 3}
+    - target: {fileID: 4832136287375232545, guid: 8688c12c296ecae47bfcbc6dad977295, type: 3}
       propertyPath: deathClip
       value: 
       objectReference: {fileID: 8300000, guid: 77c5cd0c73d74014da9ab95239365bfa, type: 3}
@@ -6022,11 +6031,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4759233945000144783, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.22
+      value: 24.512
       objectReference: {fileID: 0}
     - target: {fileID: 4759233945000144783, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.45
+      value: -3.498
       objectReference: {fileID: 0}
     - target: {fileID: 4759233945000144783, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6060,9 +6069,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5842298766901597436, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8626440375160969686, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
       propertyPath: m_Name
       value: Caixa
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890850362142741471, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890850362142741471, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.36862746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890850362142741471, guid: e4803cb9279e2044a958151cf2e9e77e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.47058824
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6459,6 +6484,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[3]
       value: 
       objectReference: {fileID: 1013890977}
+    - target: {fileID: 5382444780355155563, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
+      propertyPath: audioSourceCollectabiles
+      value: 
+      objectReference: {fileID: 31210498}
     - target: {fileID: 5603077485772311956, guid: 798b6d334b8b0ad4c8fb8a2da301df9a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.17

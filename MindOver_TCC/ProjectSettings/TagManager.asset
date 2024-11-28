@@ -20,6 +20,7 @@ TagManager:
   - CollidersFogo
   - CollidersFoguinho
   - Chefe
+  - BossCol
   layers:
   - Default
   - TransparentFX

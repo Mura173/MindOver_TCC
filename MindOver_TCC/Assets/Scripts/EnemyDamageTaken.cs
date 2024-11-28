@@ -22,6 +22,8 @@ public class EnemyDamageTaken : MonoBehaviour
 
     private bool isChefe;
 
+    public GameObject colChefe;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -70,6 +72,7 @@ public class EnemyDamageTaken : MonoBehaviour
             {
                 musicLooper.audioSource.Stop();
                 audioSource.PlayOneShot(lastDamageSound);
+                Instantiate(colChefe, transform.position, Quaternion.identity);
             }
         }
     }
