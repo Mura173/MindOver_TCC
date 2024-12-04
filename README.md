@@ -16,6 +16,19 @@
 <section id="screenshots">
 </section>
 
-# Screenshots
-<section id="screenshots">
+# How to Play
+<section id="how-to-play">  
+  <h3>Objective</h3>
+  <p>
+    Navigate the computer world, solve puzzles, defeat enemies, and collect computer parts to progress.
+  </p>
+  
+  <h3>Controls</h3>
+  <ul>
+    <li><strong>Arrow Keys</strong> or <strong>WASD</strong>: Move</li>
+    <li><strong>Space</strong>: Jump</li>
+    <li><strong>Z</strong>: Attack</li>    
+    <li><strong>E</strong>: Interact with doors</li>
+  </ul>
 </section>
+
